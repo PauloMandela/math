@@ -104,6 +104,10 @@ function img() {
   return src("./src/img/*/*").pipe(imagemin()).pipe(dest("./assets/img"));
 }
 
+function font() {
+  return src("./src/fonts/*.*").pipe(dest("./assets/fonts"));
+}
+
 // Watch files
 function watchFiles() {
   watch("./src/scss/*", css);
@@ -129,6 +133,6 @@ function browserSync() {
 
 exports.watch = series(
   clear,
-  parallel(watchFiles, browserSync,minjs, js, css, scss, minify, img)
+  parallel(watchFiles, browserSync, minjs, js, font, css, scss, minify, img)
 );
 exports.default = series(clear, parallel(js, scss, img));
