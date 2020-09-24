@@ -1,0 +1,971 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern Consolas;}{\f1\fmodern\fcharset0 Consolas;}{\f2\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red20\green20\blue20;\red142\green142\blue142;\red16\green158\blue98;\red148\green146\blue12;\red170\green51\blue170;\red56\green136\blue159;\red18\green124\blue155;\red94\green147\blue162;\red170\green85\blue85;\red126\green126\blue12;\red9\green118\blue72;\red245\green245\blue245;}
+\viewkind4\uc1\pard\f0\fs20      \u9484?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9488?\cf1\highlight2 
+\par \cf0\highlight0      \u9474?                        \cf3\f1\bullet  MobaXterm 20.2 \bullet  \cf0\f0                          \u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9474?            \cf4 (SSH client, X-server and networking tools)\cf0              \u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9474?                                                                    \u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9474? \u8594? SSH session to \cf5 root\cf0 @\cf5 165.22.73.225                                \cf0\u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9474?\f1    \bullet  SSH compression : \cf3\f0 v\cf0                                             \u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9474?\f1    \bullet  SSH-browser     : \cf3\f0 v\cf0                                             \u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9474?\f1    \bullet  X11-forwarding  : \cf3\f0 v\cf0   (remote display is forwarded through SSH) \u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9474?\f1    \bullet  DISPLAY         : \cf3\f0 v\cf0   (automatically set on remote server)      \u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9474?                                                                    \u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9474? \u8594? For more info, ctrl+click on \cf6\ul help\cf0\ulnone  or visit our \cf6\ul website\cf0\ulnone            \u9474?\cf1\highlight2 
+\par \cf0\highlight0      \u9492?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9496?\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Welcome to Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-42-generic x86_64)\cf1\highlight2 
+\par 
+\par \cf0\highlight0  * Documentation:  https://help.ubuntu.com\cf1\highlight2 
+\par \cf0\highlight0  * Management:     https://landscape.canonical.com\cf1\highlight2 
+\par \cf0\highlight0  * Support:        https://ubuntu.com/advantage\cf1\highlight2 
+\par 
+\par \cf0\highlight0   System information as of Tue Sep  1 16:07:32 UTC 2020\cf1\highlight2 
+\par 
+\par \cf0\highlight0   System load:  0.0               Users logged in:       1\cf1\highlight2 
+\par \cf0\highlight0   Usage of /:   7.7% of 24.06GB   IPv4 address for eth0: 165.22.73.225\cf1\highlight2 
+\par \cf0\highlight0   Memory usage: 23%               IPv4 address for eth0: 10.19.0.5\cf1\highlight2 
+\par \cf0\highlight0   Swap usage:   0%                IPv4 address for eth1: 10.114.0.2\cf1\highlight2 
+\par \cf0\highlight0   Processes:    109\cf1\highlight2 
+\par 
+\par \cf0\highlight0 15 updates can be installed immediately.\cf1\highlight2 
+\par \cf0\highlight0 0 of these updates are security updates.\cf1\highlight2 
+\par \cf0\highlight0 To see these additional updates run: apt list --upgradable\cf1\highlight2 
+\par 
+\par 
+\par \cf0\highlight0 Last login: Mon Aug 31 10:46:24 2020 from 51.68.139.151\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# ls\cf1\highlight2 
+\par \cf7\highlight0 snap\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# sudo apt update\cf1\highlight2 
+\par \cf0\highlight0 Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:2 http://mirrors.digitalocean.com/ubuntu focal InRelease [265 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:3 http://mirrors.digitalocean.com/ubuntu focal-updates InRelease [111 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:4 http://mirrors.digitalocean.com/ubuntu focal-backports InRelease [98.3 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [171 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:6 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [61.7 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:7 http://security.ubuntu.com/ubuntu focal-security/main amd64 c-n-f Metadata [4432 B]\cf1\highlight2 
+\par \cf0\highlight0 Get:8 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [31.7 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:9 http://security.ubuntu.com/ubuntu focal-security/restricted Translation-en [8312 B]\cf1\highlight2 
+\par \cf0\highlight0 Get:10 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [55.1 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:11 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [2212 B]\cf1\highlight2 
+\par \cf0\highlight0 Get:12 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 Packages [341 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:13 http://mirrors.digitalocean.com/ubuntu focal-updates/universe amd64 Packages [163 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:14 http://mirrors.digitalocean.com/ubuntu focal-updates/universe Translation-en [82.0 kB]\cf1\highlight2 
+\par \cf0\highlight0 Fetched 1503 kB in 1s (1879 kB/s)\cf1\highlight2 
+\par \cf0\highlight0 Reading package lists... Done\cf1\highlight2 
+\par \cf0\highlight0 Building dependency tree\cf1\highlight2 
+\par \cf0\highlight0 Reading state information... Done\cf1\highlight2 
+\par \cf0\highlight0 18 packages can be upgraded. Run 'apt list --upgradable' to see them.\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl\cf1\highlight2 
+\par \cf0\highlight0 Reading package lists... Done\cf1\highlight2 
+\par \cf0\highlight0 Building dependency tree\cf1\highlight2 
+\par \cf0\highlight0 Reading state information... Done\cf1\highlight2 
+\par \cf0\highlight0 python3-dev is already the newest version (3.8.2-0ubuntu2).\cf1\highlight2 
+\par \cf0\highlight0 python3-pip is already the newest version (20.0.2-5ubuntu1).\cf1\highlight2 
+\par \cf0\highlight0 curl is already the newest version (7.68.0-1ubuntu2.2).\cf1\highlight2 
+\par \cf0\highlight0 curl set to manually installed.\cf1\highlight2 
+\par \cf0\highlight0 postgresql is already the newest version (12+214ubuntu0.1).\cf1\highlight2 
+\par \cf0\highlight0 postgresql-contrib is already the newest version (12+214ubuntu0.1).\cf1\highlight2 
+\par \cf0\highlight0 The following additional packages will be installed:\cf1\highlight2 
+\par \cf0\highlight0   fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0 libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter\cf1\highlight2 
+\par \cf0\highlight0   libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libtiff5 libwebp6 libxpm4 nginx-common nginx-core\cf1\highlight2 
+\par \cf0\highlight0 Suggested packages:\cf1\highlight2 
+\par \cf0\highlight0   libgd-tools postgresql-doc-12 fcgiwrap nginx-doc\cf1\highlight2 
+\par \cf0\highlight0 The following NEW packages will be installed:\cf1\highlight2 
+\par \cf0\highlight0   fontconfig-config fonts-dejavu-core libfontconfig1 libgd3 libjbig0 libjpeg-turbo8 libjpeg8 libnginx-mod-http-image-filter\cf1\highlight2 
+\par \cf0\highlight0   libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream libpq-dev libtiff5 libwebp6 libxpm4 nginx nginx-common\cf1\highlight2 
+\par \cf0\highlight0   nginx-core\cf1\highlight2 
+\par \cf0\highlight0 0 upgraded, 18 newly installed, 0 to remove and 18 not upgraded.\cf1\highlight2 
+\par \cf0\highlight0 Need to get 2567 kB of archives.\cf1\highlight2 
+\par \cf0\highlight0 After this operation, 8474 kB of additional disk space will be used.\cf1\highlight2 
+\par \cf0\highlight0 Do you want to continue? [Y/n] y\cf1\highlight2 
+\par \cf0\highlight0 Get:1 http://mirrors.digitalocean.com/ubuntu focal/main amd64 fonts-dejavu-core all 2.37-1 [1041 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:2 http://mirrors.digitalocean.com/ubuntu focal/main amd64 fontconfig-config all 2.13.1-2ubuntu3 [28.8 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:3 http://mirrors.digitalocean.com/ubuntu focal/main amd64 libfontconfig1 amd64 2.13.1-2ubuntu3 [114 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:4 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libjpeg-turbo8 amd64 2.0.3-0ubuntu1.20.04.1 [117 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:5 http://mirrors.digitalocean.com/ubuntu focal/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2194 B]\cf1\highlight2 
+\par \cf0\highlight0 Get:6 http://mirrors.digitalocean.com/ubuntu focal/main amd64 libjbig0 amd64 2.1-3.1build1 [26.7 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:7 http://mirrors.digitalocean.com/ubuntu focal/main amd64 libwebp6 amd64 0.6.1-2 [185 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:8 http://mirrors.digitalocean.com/ubuntu focal/main amd64 libtiff5 amd64 4.1.0+git191117-2build1 [161 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:9 http://mirrors.digitalocean.com/ubuntu focal/main amd64 libxpm4 amd64 1:3.5.12-1 [34.0 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:10 http://mirrors.digitalocean.com/ubuntu focal/main amd64 libgd3 amd64 2.2.5-5.2ubuntu2 [118 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:11 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 nginx-common all 1.18.0-0ubuntu1 [37.3 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:12 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-0ubuntu1 [14.3 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:13 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-0ubuntu1 [12.6 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:14 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libnginx-mod-mail amd64 1.18.0-0ubuntu1 [42.3 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:15 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libnginx-mod-stream amd64 1.18.0-0ubuntu1 [66.9 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:16 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 libpq-dev amd64 12.4-0ubuntu0.20.04.1 [136 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:17 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 nginx-core amd64 1.18.0-0ubuntu1 [425 kB]\cf1\highlight2 
+\par \cf0\highlight0 Get:18 http://mirrors.digitalocean.com/ubuntu focal-updates/main amd64 nginx all 1.18.0-0ubuntu1 [3624 B]\cf1\highlight2 
+\par \cf0\highlight0 Fetched 2567 kB in 1s (4676 kB/s)\cf1\highlight2 
+\par \cf0\highlight0 Preconfiguring packages ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package fonts-dejavu-core.\cf1\highlight2 
+\par \cf0\highlight0 (Reading database ... 71289 files and directories currently installed.)\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../00-fonts-dejavu-core_2.37-1_all.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking fonts-dejavu-core (2.37-1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package fontconfig-config.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../01-fontconfig-config_2.13.1-2ubuntu3_all.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking fontconfig-config (2.13.1-2ubuntu3) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libfontconfig1:amd64.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../02-libfontconfig1_2.13.1-2ubuntu3_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libfontconfig1:amd64 (2.13.1-2ubuntu3) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libjpeg-turbo8:amd64.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../03-libjpeg-turbo8_2.0.3-0ubuntu1.20.04.1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libjpeg8:amd64.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../04-libjpeg8_8c-2ubuntu8_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libjbig0:amd64.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../05-libjbig0_2.1-3.1build1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libjbig0:amd64 (2.1-3.1build1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libwebp6:amd64.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../06-libwebp6_0.6.1-2_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libwebp6:amd64 (0.6.1-2) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libtiff5:amd64.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../07-libtiff5_4.1.0+git191117-2build1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libtiff5:amd64 (4.1.0+git191117-2build1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libxpm4:amd64.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../08-libxpm4_1%3a3.5.12-1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libxpm4:amd64 (1:3.5.12-1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libgd3:amd64.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../09-libgd3_2.2.5-5.2ubuntu2_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libgd3:amd64 (2.2.5-5.2ubuntu2) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package nginx-common.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../10-nginx-common_1.18.0-0ubuntu1_all.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking nginx-common (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libnginx-mod-http-image-filter.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../11-libnginx-mod-http-image-filter_1.18.0-0ubuntu1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libnginx-mod-http-xslt-filter.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../12-libnginx-mod-http-xslt-filter_1.18.0-0ubuntu1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libnginx-mod-mail.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../13-libnginx-mod-mail_1.18.0-0ubuntu1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libnginx-mod-mail (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libnginx-mod-stream.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../14-libnginx-mod-stream_1.18.0-0ubuntu1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libnginx-mod-stream (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package libpq-dev.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../15-libpq-dev_12.4-0ubuntu0.20.04.1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking libpq-dev (12.4-0ubuntu0.20.04.1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package nginx-core.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../16-nginx-core_1.18.0-0ubuntu1_amd64.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking nginx-core (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Selecting previously unselected package nginx.\cf1\highlight2 
+\par \cf0\highlight0 Preparing to unpack .../17-nginx_1.18.0-0ubuntu1_all.deb ...\cf1\highlight2 
+\par \cf0\highlight0 Unpacking nginx (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libxpm4:amd64 (1:3.5.12-1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up nginx-common (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service \u8594? /lib/systemd/system/nginx.service.\cf1\highlight2 
+\par \cf0\highlight0 Setting up libpq-dev (12.4-0ubuntu0.20.04.1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libjbig0:amd64 (2.1-3.1build1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libnginx-mod-http-xslt-filter (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libwebp6:amd64 (0.6.1-2) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up fonts-dejavu-core (2.37-1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libjpeg8:amd64 (8c-2ubuntu8) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libnginx-mod-mail (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up fontconfig-config (2.13.1-2ubuntu3) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libnginx-mod-stream (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libtiff5:amd64 (4.1.0+git191117-2build1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libfontconfig1:amd64 (2.13.1-2ubuntu3) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libgd3:amd64 (2.2.5-5.2ubuntu2) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up libnginx-mod-http-image-filter (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up nginx-core (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Setting up nginx (1.18.0-0ubuntu1) ...\cf1\highlight2 
+\par \cf0\highlight0 Processing triggers for ufw (0.36-6) ...\cf1\highlight2 
+\par \cf0\highlight0 Processing triggers for systemd (245.4-4ubuntu3.2) ...\cf1\highlight2 
+\par \cf0\highlight0 Processing triggers for man-db (2.9.1-1) ...\cf1\highlight2 
+\par \cf0\highlight0 Processing triggers for libc-bin (2.31-0ubuntu9) ...\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# sudo -u postgres psql\cf1\highlight2 
+\par \cf0\highlight0 could not change directory to "/root": Permission denied\cf1\highlight2 
+\par \cf0\highlight0 psql (12.4 (Ubuntu 12.4-0ubuntu0.20.04.1))\cf1\highlight2 
+\par \cf0\highlight0 Type "help" for help.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 postgres=# \\q\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# ^C\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# sudoesrs\cf1\highlight2 
+\par \cf0\highlight0 sudoesrs: command not found\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# users\cf1\highlight2 
+\par \cf0\highlight0 root root\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# nano /etc/passwd\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# adduser masit\cf1\highlight2 
+\par \cf0\highlight0 Adding user `masit' ...\cf1\highlight2 
+\par \cf0\highlight0 Adding new group `masit' (1000) ...\cf1\highlight2 
+\par \cf0\highlight0 Adding new user `masit' (1000) with group `masit' ...\cf1\highlight2 
+\par \cf0\highlight0 Creating home directory `/home/masit' ...\cf1\highlight2 
+\par \cf0\highlight0 Copying files from `/etc/skel' ...\cf1\highlight2 
+\par \cf0\highlight0 New password:\cf1\highlight2 
+\par \cf0\highlight0 Retype new password:\cf1\highlight2 
+\par \cf0\highlight0 passwd: password updated successfully\cf1\highlight2 
+\par \cf0\highlight0 Changing the user information for masit\cf1\highlight2 
+\par \cf0\highlight0 Enter the new value, or press ENTER for the default\cf1\highlight2 
+\par \cf0\highlight0         Full Name []: Masit\cf1\highlight2 
+\par \cf0\highlight0         Room Number []:\cf1\highlight2 
+\par \cf0\highlight0         Work Phone []:\cf1\highlight2 
+\par \cf0\highlight0         Home Phone []:\cf1\highlight2 
+\par \cf0\highlight0         Other []:\cf1\highlight2 
+\par \cf0\highlight0 Is the information correct? [Y/n] y\cf1\highlight2 
+\par \cf0\highlight0 root@masit:~# su masit\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:/root$ ls\cf1\highlight2 
+\par \cf0\highlight0 ls: cannot open directory '.': Permission denied\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:/root$ cd /home/masit/\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ ls\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ sudo -u postgres psql\cf1\highlight2 
+\par \cf0\highlight0 [sudo] password for masit:\cf1\highlight2 
+\par \cf0\highlight0 masit is not in the sudoers file.  This incident will be reported.\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ usermod -aG sudo masit\cf1\highlight2 
+\par \cf0\highlight0 usermod: Permission denied.\cf1\highlight2 
+\par \cf0\highlight0 usermod: cannot lock /etc/passwd; try again later.\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ sudo usermod -aG sudo masit\cf1\highlight2 
+\par \cf0\highlight0 [sudo] password for masit:\cf1\highlight2 
+\par \cf0\highlight0 Sorry, try again.\cf1\highlight2 
+\par \cf0\highlight0 [sudo] password for masit:\cf1\highlight2 
+\par \cf0\highlight0 masit is not in the sudoers file.  This incident will be reported.\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ su root\cf1\highlight2 
+\par \cf0\highlight0 Password:\cf1\highlight2 
+\par \cf0\highlight0 root@masit:/home/masit# sudo usermod -aG sudo masit\cf1\highlight2 
+\par \cf0\highlight0 root@masit:/home/masit# su masit\cf1\highlight2 
+\par \cf0\highlight0 To run a command as administrator (user "root"), use "sudo <command>".\cf1\highlight2 
+\par \cf0\highlight0 See "man sudo_root" for details.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 masit@masit:~$ groups masit\cf1\highlight2 
+\par \cf0\highlight0 masit : masit sudo\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ sudo -u postgres psql\cf1\highlight2 
+\par \cf0\highlight0 [sudo] password for masit:\cf1\highlight2 
+\par \cf0\highlight0 psql (12.4 (Ubuntu 12.4-0ubuntu0.20.04.1))\cf1\highlight2 
+\par \cf0\highlight0 Type "help" for help.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 postgres=# CREATE DATABASE masitdb;\cf1\highlight2 
+\par \cf0\highlight0 CREATE DATABASE\cf1\highlight2 
+\par \cf0\highlight0 postgres=# CREATE USER masitdbuser WITH  PASSWORD 'ZemZemSoft2020@MathItdb';\cf1\highlight2 
+\par \cf0\highlight0 CREATE ROLE\cf1\highlight2 
+\par \cf0\highlight0 postgres=# ALTER ROLE masitdbuser SET client_encoding TO 'utf8';\cf1\highlight2 
+\par \cf0\highlight0 ALTER ROLE\cf1\highlight2 
+\par \cf0\highlight0 postgres=# ALTER ROLE masitdbuser SET default_transaction_isolation TO 'read committed';\cf1\highlight2 
+\par \cf0\highlight0 ALTER ROLE\cf1\highlight2 
+\par \cf0\highlight0 postgres=# ALTER ROLE masitdbuser SET timezone TO 'UTC';\cf1\highlight2 
+\par \cf0\highlight0 ALTER ROLE\cf1\highlight2 
+\par \cf0\highlight0 postgres=# GRANT ALL PRIVILEGES ON DATABASE masitdb TO masitdbuser;\cf1\highlight2 
+\par \cf0\highlight0 GRANT\cf1\highlight2 
+\par \cf0\highlight0 postgres=# \\q\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ ^C\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ sudo -H pip3 install --upgrade pip\cf1\highlight2 
+\par \cf0\highlight0 Collecting pip\cf1\highlight2 
+\par \cf0\highlight0   Downloading pip-20.2.2-py2.py3-none-any.whl (1.5 MB)\cf1\highlight2 
+\par \cf0\highlight0      |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 1.5 MB 32.6 MB/s\cf1\highlight2 
+\par \cf0\highlight0 Installing collected packages: pip\cf1\highlight2 
+\par \cf0\highlight0   Attempting uninstall: pip\cf1\highlight2 
+\par \cf0\highlight0     Found existing installation: pip 20.0.2\cf1\highlight2 
+\par \cf0\highlight0     Not uninstalling pip at /usr/lib/python3/dist-packages, outside environment /usr\cf1\highlight2 
+\par \cf0\highlight0     Can't uninstall 'pip'. No files were found to uninstall.\cf1\highlight2 
+\par \cf0\highlight0 Successfully installed pip-20.2.2\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ sudo -H pip3 install virtualenv\cf1\highlight2 
+\par \cf0\highlight0 Collecting virtualenv\cf1\highlight2 
+\par \cf0\highlight0   Downloading virtualenv-20.0.31-py2.py3-none-any.whl (4.9 MB)\cf1\highlight2 
+\par \cf0\highlight0      |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 4.9 MB 15.5 MB/s\cf1\highlight2 
+\par \cf0\highlight0 Collecting distlib<1,>=0.3.1\cf1\highlight2 
+\par \cf0\highlight0   Downloading distlib-0.3.1-py2.py3-none-any.whl (335 kB)\cf1\highlight2 
+\par \cf0\highlight0      |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 335 kB 92.6 MB/s\cf1\highlight2 
+\par \cf0\highlight0 Collecting appdirs<2,>=1.4.3\cf1\highlight2 
+\par \cf0\highlight0   Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)\cf1\highlight2 
+\par \cf0\highlight0 Requirement already satisfied: six<2,>=1.9.0 in /usr/lib/python3/dist-packages (from virtualenv) (1.14.0)\cf1\highlight2 
+\par \cf0\highlight0 Collecting filelock<4,>=3.0.0\cf1\highlight2 
+\par \cf0\highlight0   Downloading filelock-3.0.12-py3-none-any.whl (7.6 kB)\cf1\highlight2 
+\par \cf0\highlight0 Installing collected packages: distlib, appdirs, filelock, virtualenv\cf1\highlight2 
+\par \cf0\highlight0 Successfully installed appdirs-1.4.4 distlib-0.3.1 filelock-3.0.12 virtualenv-20.0.31\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ ls\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ path\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Command 'path' not found, did you mean:\cf1\highlight2 
+\par 
+\par \cf0\highlight0   command 'mpath' from deb libmodule-path-perl (0.19-1)\cf1\highlight2 
+\par \cf0\highlight0   command 'path6' from deb ipv6toolkit (2.0-1)\cf1\highlight2 
+\par \cf0\highlight0   command 'xpath' from deb libxml-xpath-perl (1.44-1)\cf1\highlight2 
+\par \cf0\highlight0   command 'pat' from deb dist (1:3.5-236-0.1build1)\cf1\highlight2 
+\par \cf0\highlight0   command 'patch' from deb patch (2.7.6-6)\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Try: sudo apt install <deb name>\cf1\highlight2 
+\par 
+\par \cf0\highlight0 masit@masit:~$ pwd\cf1\highlight2 
+\par \cf0\highlight0 /home/masit\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ mkdir ~/masitdir\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~$ cd ~/masitdir/\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ virtualenv masitenv\cf1\highlight2 
+\par \cf0\highlight0 created virtual environment CPython3.8.2.final.0-64 in 746ms\cf1\highlight2 
+\par \cf0\highlight0   creator CPython3Posix(dest=/home/masit/masitdir/masitenv, clear=False, global=False)\cf1\highlight2 
+\par \cf0\highlight0   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/masit/.local/share/virtualenv)\cf1\highlight2 
+\par \cf0\highlight0     added seed packages: pip==20.2.2, setuptools==49.6.0, wheel==0.35.1\cf1\highlight2 
+\par \cf0\highlight0   activators BashActivator,CShellActivator,FishActivator,PowerShellActivator,PythonActivator,XonshActivator\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ source masitenv/bin/activate\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ pip install django gunicorn psycopg2-binary\cf1\highlight2 
+\par \cf0\highlight0 Collecting django\cf1\highlight2 
+\par \cf0\highlight0   Downloading Django-3.1.1-py3-none-any.whl (7.8 MB)\cf1\highlight2 
+\par \cf0\highlight0      |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 7.8 MB 83 kB/s\cf1\highlight2 
+\par \cf0\highlight0 Collecting gunicorn\cf1\highlight2 
+\par \cf0\highlight0   Downloading gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)\cf1\highlight2 
+\par \cf0\highlight0      |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 77 kB 4.4 MB/s\cf1\highlight2 
+\par \cf0\highlight0 Collecting psycopg2-binary\cf1\highlight2 
+\par \cf0\highlight0   Downloading psycopg2_binary-2.8.5-cp38-cp38-manylinux1_x86_64.whl (3.0 MB)\cf1\highlight2 
+\par \cf0\highlight0      |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 3.0 MB 32.8 MB/s\cf1\highlight2 
+\par \cf0\highlight0 Collecting asgiref~=3.2.10\cf1\highlight2 
+\par \cf0\highlight0   Downloading asgiref-3.2.10-py3-none-any.whl (19 kB)\cf1\highlight2 
+\par \cf0\highlight0 Collecting pytz\cf1\highlight2 
+\par \cf0\highlight0   Downloading pytz-2020.1-py2.py3-none-any.whl (510 kB)\cf1\highlight2 
+\par \cf0\highlight0      |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 510 kB 35.5 MB/s\cf1\highlight2 
+\par \cf0\highlight0 Collecting sqlparse>=0.2.2\cf1\highlight2 
+\par \cf0\highlight0   Downloading sqlparse-0.3.1-py2.py3-none-any.whl (40 kB)\cf1\highlight2 
+\par \cf0\highlight0      |\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?\u9608?| 40 kB 7.6 MB/s\cf1\highlight2 
+\par \cf0\highlight0 Requirement already satisfied: setuptools>=3.0 in ./masitenv/lib/python3.8/site-packages (from gunicorn) (49.6.0)\cf1\highlight2 
+\par \cf0\highlight0 Installing collected packages: asgiref, pytz, sqlparse, django, gunicorn, psycopg2-binary\cf1\highlight2 
+\par \cf0\highlight0 Successfully installed asgiref-3.2.10 django-3.1.1 gunicorn-20.0.4 psycopg2-binary-2.8.5 pytz-2020.1 sqlparse-0.3.1\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ django-admin.py startproject masitproject ~/masitdir\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ nano ~/myprojectdir/myproject/settings.py\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ nano ~/masitdir/masit\cf1\highlight2 
+\par \cf0\highlight0 masitenv/     masitproject/\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ nano ~/masitdir/masit\cf1\highlight2 
+\par \cf0\highlight0 masitenv/     masitproject/\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ nano ~/masitdir/masitproject/settings.py\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ nano ~/masitdir/masitproject/settings.py\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ ~/masitdir/manage.py makemigrations\cf1\highlight2 
+\par \cf0\highlight0 Traceback (most recent call last):\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/manage.py", line 22, in <module>\cf1\highlight2 
+\par \cf0\highlight0     main()\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/manage.py", line 18, in main\cf1\highlight2 
+\par \cf0\highlight0     execute_from_command_line(sys.argv)\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line\cf1\highlight2 
+\par \cf0\highlight0     utility.execute()\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/core/management/__init__.py", line 345, in execute\cf1\highlight2 
+\par \cf0\highlight0     settings.INSTALLED_APPS\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/conf/__init__.py", line 83, in __getattr__\cf1\highlight2 
+\par \cf0\highlight0     self._setup(name)\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup\cf1\highlight2 
+\par \cf0\highlight0     self._wrapped = Settings(settings_module)\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__\cf1\highlight2 
+\par \cf0\highlight0     mod = importlib.import_module(self.SETTINGS_MODULE)\cf1\highlight2 
+\par \cf0\highlight0   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module\cf1\highlight2 
+\par \cf0\highlight0     return _bootstrap._gcd_import(name[level:], package, level)\cf1\highlight2 
+\par \cf0\highlight0   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\cf1\highlight2 
+\par \cf0\highlight0   File "<frozen importlib._bootstrap>", line 991, in _find_and_load\cf1\highlight2 
+\par \cf0\highlight0   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\cf1\highlight2 
+\par \cf0\highlight0   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\cf1\highlight2 
+\par \cf0\highlight0   File "<frozen importlib._bootstrap_external>", line 783, in exec_module\cf1\highlight2 
+\par \cf0\highlight0   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitproject/settings.py", line 125, in <module>\cf1\highlight2 
+\par \cf0\highlight0     STATIC_ROOT = os.path.join(BASE_DIR, 'static/')\cf1\highlight2 
+\par \cf0\highlight0 NameError: name 'os' is not defined\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ nano ~/masitdir/masitproject/settings.py\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ ~/masitdir/manage.py makemigrations\cf1\highlight2 
+\par \cf0\highlight0 No changes detected\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ ~/masitdir/manage.py migrate\cf1\highlight2 
+\par \cf8\highlight0 Operations to perform:\cf1\highlight2 
+\par \cf0\highlight0\b   Apply all migrations: \b0 admin, auth, contenttypes, sessions\cf1\highlight2 
+\par \cf8\highlight0 Running migrations:\cf1\highlight2 
+\par \cf0\highlight0   Applying contenttypes.0001_initial...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0001_initial...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying admin.0001_initial...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying admin.0002_logentry_remove_auto_add...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying admin.0003_logentry_add_action_flag_choices...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying contenttypes.0002_remove_content_type_name...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0002_alter_permission_name_max_length...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0003_alter_user_email_max_length...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0004_alter_user_username_opts...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0005_alter_user_last_login_null...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0006_require_contenttypes_0002...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0007_alter_validators_add_error_messages...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0008_alter_user_username_max_length...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0009_alter_user_last_name_max_length...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0010_alter_group_name_max_length...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0011_update_proxy_permissions...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying auth.0012_alter_user_first_name_max_length...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0   Applying sessions.0001_initial...\cf3  OK\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ ~/masitdir/manage.py createsuperuser\cf1\highlight2 
+\par \cf0\highlight0 Username (leave blank to use 'masit'): masitadmin\cf1\highlight2 
+\par \cf0\highlight0 Email address: paulo.mandela.1992@outlook.com\cf1\highlight2 
+\par \cf0\highlight0 Password:\cf1\highlight2 
+\par \cf0\highlight0 Password (again):\cf1\highlight2 
+\par \cf9\highlight0 This password is too short. It must contain at least 8 characters.\cf1\highlight2 
+\par \cf9\highlight0 This password is too common.\cf1\highlight2 
+\par \cf9\highlight0 This password is entirely numeric.\cf1\highlight2 
+\par \cf0\highlight0 Bypass password validation and create user anyway? [y/N]: y\cf1\highlight2 
+\par \cf0\highlight0 Superuser created successfully.\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ ~/masitdir/manage.py collectstatic\cf1\highlight2 
+\par 
+\par \cf0\highlight0 You have requested to collect static files at the destination\cf1\highlight2 
+\par \cf0\highlight0 location as specified in your settings.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 This will overwrite existing files!\cf1\highlight2 
+\par \cf0\highlight0 Are you sure you want to do this?\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Type 'yes' to continue, or 'no' to cancel: y\cf1\highlight2 
+\par \cf9\highlight0 CommandError: Collecting static files cancelled.\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ ~/masitdir/manage.py collectstatic\cf1\highlight2 
+\par 
+\par \cf0\highlight0 You have requested to collect static files at the destination\cf1\highlight2 
+\par \cf0\highlight0 location as specified in your settings.\cf1\highlight2 
+\par 
+\par \cf0\highlight0 This will overwrite existing files!\cf1\highlight2 
+\par \cf0\highlight0 Are you sure you want to do this?\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Type 'yes' to continue, or 'no' to cancel: yes\cf1\highlight2 
+\par \cf0\highlight0 Traceback (most recent call last):\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/manage.py", line 22, in <module>\cf1\highlight2 
+\par \cf0\highlight0     main()\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/manage.py", line 18, in main\cf1\highlight2 
+\par \cf0\highlight0     execute_from_command_line(sys.argv)\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/core/management/__init__.py", line 401, in execute_from_command_line\cf1\highlight2 
+\par \cf0\highlight0     utility.execute()\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/core/management/__init__.py", line 395, in execute\cf1\highlight2 
+\par \cf0\highlight0     self.fetch_command(subcommand).run_from_argv(self.argv)\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/core/management/base.py", line 330, in run_from_argv\cf1\highlight2 
+\par \cf0\highlight0     self.execute(*args, **cmd_options)\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/core/management/base.py", line 371, in execute\cf1\highlight2 
+\par \cf0\highlight0     output = self.handle(*args, **options)\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 194, in handle\cf1\highlight2 
+\par \cf0\highlight0     collected = self.collect()\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 118, in collect\cf1\highlight2 
+\par \cf0\highlight0     handler(path, prefixed_path, storage)\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 345, in copy_file\cf1\highlight2 
+\par \cf0\highlight0     if not self.delete_file(path, prefixed_path, source_storage):\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 255, in delete_file\cf1\highlight2 
+\par \cf0\highlight0     if self.storage.exists(prefixed_path):\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/core/files/storage.py", line 311, in exists\cf1\highlight2 
+\par \cf0\highlight0     return os.path.exists(self.path(name))\cf1\highlight2 
+\par \cf0\highlight0   File "/home/masit/masitdir/masitenv/lib/python3.8/site-packages/django/contrib/staticfiles/storage.py", line 38, in path\cf1\highlight2 
+\par \cf0\highlight0     raise ImproperlyConfigured("You're using the staticfiles app "\cf1\highlight2 
+\par \cf0\highlight0 django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app without having set the STATIC_ROOT setting to a filesystem path.\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ sudo ufw allow 8000\cf1\highlight2 
+\par \cf0\highlight0 [sudo] password for masit:\cf1\highlight2 
+\par \cf0\highlight0 Rules updated\cf1\highlight2 
+\par \cf0\highlight0 Rules updated (v6)\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ ~/masitdir/manage.py runserver 0.0.0.0:8000\cf1\highlight2 
+\par \cf0\highlight0 Watching for file changes with StatReloader\cf1\highlight2 
+\par \cf0\highlight0 Performing system checks...\cf1\highlight2 
+\par 
+\par \cf0\highlight0 System check identified no issues (0 silenced).\cf1\highlight2 
+\par \cf0\highlight0 September 01, 2020 - 16:43:11\cf1\highlight2 
+\par \cf0\highlight0 Django version 3.1.1, using settings 'masitproject.settings'\cf1\highlight2 
+\par \cf0\highlight0 Starting development server at http://0.0.0.0:8000/\cf1\highlight2 
+\par \cf0\highlight0 Quit the server with CONTROL-C.\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:21] "GET / HTTP/1.1" 200 16351\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:22] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:23] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:23] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:23] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /favicon.ico\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:27] \cf10 "GET /favicon.ico HTTP/1.1" 404 1982\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:27] \cf11 "GET /admin HTTP/1.1" 301 0\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:28] \cf11 "GET /admin/ HTTP/1.1" 302 0\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:29] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2194\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:30] "GET /static/admin/css/base.css HTTP/1.1" 200 16307\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:30] "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 1942\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:30] "GET /static/admin/css/login.css HTTP/1.1" 200 1185\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:30] "GET /static/admin/css/responsive.css HTTP/1.1" 200 18617\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:31] "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:37] \cf11 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:38] "GET /admin/ HTTP/1.1" 200 3311\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:39] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:39] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:39] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380\cf1\highlight2 
+\par \cf0\highlight0 [01/Sep/2020 16:43:47] "GET / HTTP/1.1" 200 16351\cf1\highlight2 
+\par \cf0\highlight0 ^C(masitenv) masit@masit:~/masitdir$ cd ~/masitdir/\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ gunicorn --bind 0.0.0.0:8000 masit\cf1\highlight2 
+\par \cf0\highlight0 masitenv/     masitproject/\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ gunicorn --bind 0.0.0.0:8000 masitproject.wsgi\cf1\highlight2 
+\par \cf0\highlight0 [2020-09-01 16:44:45 +0000] [61226] [INFO] Starting gunicorn 20.0.4\cf1\highlight2 
+\par \cf0\highlight0 [2020-09-01 16:44:45 +0000] [61226] [INFO] Listening at: http://0.0.0.0:8000 (61226)\cf1\highlight2 
+\par \cf0\highlight0 [2020-09-01 16:44:45 +0000] [61226] [INFO] Using worker: sync\cf1\highlight2 
+\par \cf0\highlight0 [2020-09-01 16:44:45 +0000] [61228] [INFO] Booting worker with pid: 61228\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /static/admin/css/fonts.css\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /favicon.ico\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /static/admin/css/fonts.css\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /static/admin/css/dashboard.css\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /static/admin/css/base.css\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /static/admin/css/nav_sidebar.css\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /static/admin/css/responsive.css\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /static/admin/js/nav_sidebar.js\cf1\highlight2 
+\par \cf0\highlight0 Not Found: /favicon.ico\cf1\highlight2 
+\par \cf0\highlight0 ^C[2020-09-01 16:45:20 +0000] [61226] [INFO] Handling signal: int\cf1\highlight2 
+\par \cf0\highlight0 [2020-09-01 16:45:21 +0000] [61226] [INFO] Shutting down: Master\cf1\highlight2 
+\par \cf0\highlight0 (masitenv) masit@masit:~/masitdir$ deactivate\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo nano /etc/systemd/system/gunicorn.socket\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo nano /etc/systemd/system/gunicorn.service\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo systemctl start gunicorn.socket\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo systemctl enable gunicorn.socket\cf1\highlight2 
+\par \cf0\highlight0 Created symlink /etc/systemd/system/sockets.target.wants/gunicorn.socket \u8594? /etc/systemd/system/gunicorn.socket.\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo systemctl status gunicorn.socket\cf1\highlight2 
+\par \cf3\highlight0\u9679?\cf0  gunicorn.socket - gunicorn socket\cf1\highlight2 
+\par \cf0\highlight0      Loaded: loaded (/etc/systemd/system/gunicorn.socket; enabled; vendor preset: enabled)\cf1\highlight2 
+\par \cf0\highlight0      Active: \cf3 active (listening)\cf0  since Tue 2020-09-01 16:49:02 UTC; 14s ago\cf1\highlight2 
+\par \cf0\highlight0    Triggers: \u9679? gunicorn.service\cf1\highlight2 
+\par \cf0\highlight0      Listen: /run/gunicorn.sock (Stream)\cf1\highlight2 
+\par \cf0\highlight0       Tasks: 0 (limit: 1137)\cf1\highlight2 
+\par \cf0\highlight0      Memory: 0B\cf1\highlight2 
+\par \cf0\highlight0      CGroup: /system.slice/gunicorn.socket\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Sep 01 16:49:02 masit systemd[1]: Listening on gunicorn socket.\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ file /run/gunicorn.sock\cf1\highlight2 
+\par \cf0\highlight0 /run/gunicorn.sock: socket\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo systemctl status gunicorn\cf1\highlight2 
+\par \cf0\highlight0\u9679? gunicorn.service - gunicorn daemon\cf1\highlight2 
+\par \cf0\highlight0      Loaded: loaded (/etc/systemd/system/gunicorn.service; disabled; vendor preset: enabled)\cf1\highlight2 
+\par \cf0\highlight0      Active: inactive (dead)\cf1\highlight2 
+\par \cf0\highlight0 TriggeredBy: \cf3\u9679?\cf0  gunicorn.socket\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ curl --unix-socket /run/gunicorn.sock localhost\cf1\highlight2 
+\par 
+\par \cf0\highlight0 <!doctype html>\cf1\highlight2 
+\par 
+\par \cf0\highlight0 <html>\cf1\highlight2 
+\par \cf0\highlight0     <head>\cf1\highlight2 
+\par \cf0\highlight0         <meta charset="utf-8">\cf1\highlight2 
+\par \cf0\highlight0         <title>Django: the Web framework for perfectionists with deadlines.</title>\cf1\highlight2 
+\par \cf0\highlight0         <meta name="viewport" content="width=device-width, initial-scale=1">\cf1\highlight2 
+\par \cf0\highlight0         <link rel="stylesheet" type="text/css" href="/static/admin/css/fonts.css">\cf1\highlight2 
+\par \cf0\highlight0         <style type="text/css">\cf1\highlight2 
+\par \cf0\highlight0           body, main \{\cf1\highlight2 
+\par \cf0\highlight0             margin: 0 auto;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .body, .tip \{\cf1\highlight2 
+\par \cf0\highlight0             stroke: #fff;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           html \{\cf1\highlight2 
+\par \cf0\highlight0             line-height: 1.15;\cf1\highlight2 
+\par \cf0\highlight0             -ms-text-size-adjust: 100%;\cf1\highlight2 
+\par \cf0\highlight0             -webkit-text-size-adjust: 100%;\cf1\highlight2 
+\par \cf0\highlight0             box-sizing: border-box;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           footer, header, main \{\cf1\highlight2 
+\par \cf0\highlight0             display: block;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           a \{\cf1\highlight2 
+\par \cf0\highlight0             background-color: transparent;\cf1\highlight2 
+\par \cf0\highlight0             -webkit-text-decoration-skip: objects;\cf1\highlight2 
+\par \cf0\highlight0             color: #19865C;\cf1\highlight2 
+\par \cf0\highlight0             text-decoration: none;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           img \{\cf1\highlight2 
+\par \cf0\highlight0             border-style: none;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           header \{\cf1\highlight2 
+\par \cf0\highlight0             border-bottom: 1px solid #efefef;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           svg:not(:root) \{\cf1\highlight2 
+\par \cf0\highlight0             overflow: hidden;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           body \{\cf1\highlight2 
+\par \cf0\highlight0             max-width: 960px;\cf1\highlight2 
+\par \cf0\highlight0             color: #525252;\cf1\highlight2 
+\par \cf0\highlight0             font-family: Roboto, sans-serif;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           main \{\cf1\highlight2 
+\par \cf0\highlight0             text-align: center;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .u-clearfix:after \{\cf1\highlight2 
+\par \cf0\highlight0             content: "";\cf1\highlight2 
+\par \cf0\highlight0             clear: both;\cf1\highlight2 
+\par \cf0\highlight0             display: table;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .exhaust.two, .fuel, .removehole \{\cf1\highlight2 
+\par \cf0\highlight0             display: none;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           h1, h2, h3, h4, h5, p, ul \{\cf1\highlight2 
+\par \cf0\highlight0             padding: 0;\cf1\highlight2 
+\par \cf0\highlight0             margin: 0;\cf1\highlight2 
+\par \cf0\highlight0             font-weight: 400;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           header \{\cf1\highlight2 
+\par \cf0\highlight0             padding-top: 20px;\cf1\highlight2 
+\par \cf0\highlight0             padding-bottom: 10px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .logo \{\cf1\highlight2 
+\par \cf0\highlight0             float: left;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .logo h2 \{\cf1\highlight2 
+\par \cf0\highlight0             font-weight: 700;\cf1\highlight2 
+\par \cf0\highlight0             margin-top: 0px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .release-notes \{\cf1\highlight2 
+\par \cf0\highlight0             float: right;\cf1\highlight2 
+\par \cf0\highlight0             margin-top: 7px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .release-notes p \{\cf1\highlight2 
+\par \cf0\highlight0             font-size: 14px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .figure \{\cf1\highlight2 
+\par \cf0\highlight0             margin-top: 19vh;\cf1\highlight2 
+\par \cf0\highlight0             height: 181px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .figure__animation \{\cf1\highlight2 
+\par \cf0\highlight0             max-width: 265px;\cf1\highlight2 
+\par \cf0\highlight0             position: relative;\cf1\highlight2 
+\par \cf0\highlight0             z-index: -9;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .tip \{\cf1\highlight2 
+\par \cf0\highlight0             stroke-width: 3px;\cf1\highlight2 
+\par \cf0\highlight0             -webkit-transform: translateY(-7px);\cf1\highlight2 
+\par \cf0\highlight0             transform: translateY(-7px);\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .body \{\cf1\highlight2 
+\par \cf0\highlight0             fill: #6DDCBD;\cf1\highlight2 
+\par \cf0\highlight0             -webkit-transform: scaleX(1.25);\cf1\highlight2 
+\par \cf0\highlight0             transform: scaleX(1.25);\cf1\highlight2 
+\par \cf0\highlight0             -webkit-transform-origin: center;\cf1\highlight2 
+\par \cf0\highlight0             transform-origin: center;\cf1\highlight2 
+\par \cf0\highlight0             stroke-width: 3px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .box \{\cf1\highlight2 
+\par \cf0\highlight0             position: absolute;\cf1\highlight2 
+\par \cf0\highlight0             bottom: 0;\cf1\highlight2 
+\par \cf0\highlight0             left: 0;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .circle \{\cf1\highlight2 
+\par \cf0\highlight0             fill: #6DDCBD;\cf1\highlight2 
+\par \cf0\highlight0             stroke: #fff;\cf1\highlight2 
+\par \cf0\highlight0             stroke-width: 7px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .exhaust \{\cf1\highlight2 
+\par \cf0\highlight0             border-bottom-left-radius: 4px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .exhaust.two, .exhaust__line \{\cf1\highlight2 
+\par \cf0\highlight0             -webkit-animation: thurst 70ms infinite ease-in-out alternate;\cf1\highlight2 
+\par \cf0\highlight0             animation: thurst 70ms infinite ease-in-out alternate;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .smoke \{\cf1\highlight2 
+\par \cf0\highlight0             -webkit-animation: smoke .1s infinite ease-in-out alternate;\cf1\highlight2 
+\par \cf0\highlight0             animation: smoke .1s infinite ease-in-out alternate;\cf1\highlight2 
+\par \cf0\highlight0             -webkit-transform-origin: center;\cf1\highlight2 
+\par \cf0\highlight0             transform-origin: center;\cf1\highlight2 
+\par \cf0\highlight0             opacity: .8;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @-moz-document url-prefix() \{\cf1\highlight2 
+\par \cf0\highlight0             .smoke \{\cf1\highlight2 
+\par \cf0\highlight0               animation: smokeFirefox .2s infinite ease-in-out alternate;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @-webkit-keyframes smoke \{\cf1\highlight2 
+\par \cf0\highlight0             0% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: scale(1.58, 1.2) translateY(-55px) skew(3deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: scale(1.58, 1.2) translateY(-55px) skew(3deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             100% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: scale(1.6, 1.22) translateY(-55px) skew(-3deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: scale(1.6, 1.22) translateY(-55px) skew(-3deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @keyframes smoke \{\cf1\highlight2 
+\par \cf0\highlight0             0% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: scale(1.58, 1.2) translateY(-55px) skew(3deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: scale(1.58, 1.2) translateY(-55px) skew(3deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             100% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: scale(1.6, 1.22) translateY(-55px) skew(-3deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: scale(1.6, 1.22) translateY(-55px) skew(-3deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @-webkit-keyframes smokeFirefox \{\cf1\highlight2 
+\par \cf0\highlight0             0% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: scale(1.58, 1.2) translateY(-75px) skew(0);\cf1\highlight2 
+\par \cf0\highlight0               transform: scale(1.58, 1.2) translateY(-75px) skew(0);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             100% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: scale(1.58, 1.21) translateY(-75px) skew(1deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: scale(1.58, 1.21) translateY(-75px) skew(1deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @keyframes smokeFirefox \{\cf1\highlight2 
+\par \cf0\highlight0             0% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: scale(1.58, 1.2) translateY(-75px) skew(0);\cf1\highlight2 
+\par \cf0\highlight0               transform: scale(1.58, 1.2) translateY(-75px) skew(0);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             100% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: scale(1.58, 1.21) translateY(-75px) skew(1deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: scale(1.58, 1.21) translateY(-75px) skew(1deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .flame 0%, .flame 100% \{\cf1\highlight2 
+\par \cf0\highlight0             -webkit-transform: translate(265px, 249px) scale(1.9) rotate(180deg);\cf1\highlight2 
+\par \cf0\highlight0             transform: translate(265px, 249px) scale(1.9) rotate(180deg);\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .flame \{\cf1\highlight2 
+\par \cf0\highlight0             -webkit-animation: burnInner2 .1s infinite ease-in-out alternate;\cf1\highlight2 
+\par \cf0\highlight0             animation: burnInner2 .1s infinite ease-in-out alternate;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @-webkit-keyframes burnInner2 \{\cf1\highlight2 
+\par \cf0\highlight0             0% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: translate(265px, 249px) scale(1.9) rotate(180deg) skew(5deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: translate(265px, 249px) scale(1.9) rotate(180deg) skew(5deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             100% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: translate(265px, 253px) scale(2.2) rotate(180deg) skew(-5deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: translate(265px, 253px) scale(2.2) rotate(180deg) skew(-5deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @keyframes burnInner2 \{\cf1\highlight2 
+\par \cf0\highlight0             0% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: translate(265px, 249px) scale(1.9) rotate(180deg) skew(5deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: translate(265px, 249px) scale(1.9) rotate(180deg) skew(5deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             100% \{\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: translate(265px, 253px) scale(2.2) rotate(180deg) skew(-5deg);\cf1\highlight2 
+\par \cf0\highlight0               transform: translate(265px, 253px) scale(2.2) rotate(180deg) skew(-5deg);\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @-webkit-keyframes thurst \{\cf1\highlight2 
+\par \cf0\highlight0             0% \{\cf1\highlight2 
+\par \cf0\highlight0               opacity: 1;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             100% \{\cf1\highlight2 
+\par \cf0\highlight0               opacity: .5;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @keyframes thurst \{\cf1\highlight2 
+\par \cf0\highlight0             0% \{\cf1\highlight2 
+\par \cf0\highlight0               opacity: 1;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             100% \{\cf1\highlight2 
+\par \cf0\highlight0               opacity: .5;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           h2 \{\cf1\highlight2 
+\par \cf0\highlight0             font-size: 22px;\cf1\highlight2 
+\par \cf0\highlight0             max-width: 500px;\cf1\highlight2 
+\par \cf0\highlight0             margin: 5px auto 0;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           main p \{\cf1\highlight2 
+\par \cf0\highlight0             font-size: 16px;\cf1\highlight2 
+\par \cf0\highlight0             line-height: 20px;\cf1\highlight2 
+\par \cf0\highlight0             max-width: 390px;\cf1\highlight2 
+\par \cf0\highlight0             margin: 15px auto 0;\cf1\highlight2 
+\par \cf0\highlight0             color: #888888;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           footer \{\cf1\highlight2 
+\par \cf0\highlight0             padding: 25px 0;\cf1\highlight2 
+\par \cf0\highlight0             position: fixed;\cf1\highlight2 
+\par \cf0\highlight0             left: 50%;\cf1\highlight2 
+\par \cf0\highlight0             bottom: 0;\cf1\highlight2 
+\par \cf0\highlight0             width: 960px;\cf1\highlight2 
+\par \cf0\highlight0             -webkit-transform: translateX(-50%);\cf1\highlight2 
+\par \cf0\highlight0             transform: translateX(-50%);\cf1\highlight2 
+\par \cf0\highlight0             -webkit-transform-style: preserve-3d;\cf1\highlight2 
+\par \cf0\highlight0             transform-style: preserve-3d;\cf1\highlight2 
+\par \cf0\highlight0             border-top: 1px solid #efefef;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .option \{\cf1\highlight2 
+\par \cf0\highlight0             float: left;\cf1\highlight2 
+\par \cf0\highlight0             width: 33.33%;\cf1\highlight2 
+\par \cf0\highlight0             box-sizing: border-box;\cf1\highlight2 
+\par \cf0\highlight0             padding-right: 5px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .option svg \{\cf1\highlight2 
+\par \cf0\highlight0             width: 25px;\cf1\highlight2 
+\par \cf0\highlight0             height: 25px;\cf1\highlight2 
+\par \cf0\highlight0             fill: gray;\cf1\highlight2 
+\par \cf0\highlight0             border: 1px solid #d6d6d6;\cf1\highlight2 
+\par \cf0\highlight0             padding: 5px;\cf1\highlight2 
+\par \cf0\highlight0             border-radius: 100%;\cf1\highlight2 
+\par \cf0\highlight0             float: left;\cf1\highlight2 
+\par \cf0\highlight0             margin-right: 10px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .option div \{\cf1\highlight2 
+\par \cf0\highlight0             display: table;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .option h4 \{\cf1\highlight2 
+\par \cf0\highlight0             color: #19865C;\cf1\highlight2 
+\par \cf0\highlight0             font-size: 19px;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           .option p \{\cf1\highlight2 
+\par \cf0\highlight0             font-weight: 300;\cf1\highlight2 
+\par \cf0\highlight0             font-size: 15px;\cf1\highlight2 
+\par \cf0\highlight0             padding-top: 3px;\cf1\highlight2 
+\par \cf0\highlight0             color: #757575;\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @media (max-width: 996px) \{\cf1\highlight2 
+\par \cf0\highlight0             body, footer \{\cf1\highlight2 
+\par \cf0\highlight0               max-width: 780px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             .logo h2 \{\cf1\highlight2 
+\par \cf0\highlight0               margin-left: 0px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @media (max-width: 800px) \{\cf1\highlight2 
+\par \cf0\highlight0             footer, main \{\cf1\highlight2 
+\par \cf0\highlight0               position: relative;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             footer \{\cf1\highlight2 
+\par \cf0\highlight0               height: 100%;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             .option \{\cf1\highlight2 
+\par \cf0\highlight0               position: relative;\cf1\highlight2 
+\par \cf0\highlight0               width: 100%;\cf1\highlight2 
+\par \cf0\highlight0               left: auto;\cf1\highlight2 
+\par \cf0\highlight0               right: auto;\cf1\highlight2 
+\par \cf0\highlight0               top: auto;\cf1\highlight2 
+\par \cf0\highlight0               padding: 0 25px;\cf1\highlight2 
+\par \cf0\highlight0               margin-bottom: 60px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             .two \{\cf1\highlight2 
+\par \cf0\highlight0               margin-left: 0px;\cf1\highlight2 
+\par \cf0\highlight0               -webkit-transform: none;\cf1\highlight2 
+\par \cf0\highlight0               transform: none;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             .logo, .option, .release-notes \{\cf1\highlight2 
+\par \cf0\highlight0               float: none;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             .figure \{\cf1\highlight2 
+\par \cf0\highlight0               margin-top: 10px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             main \{\cf1\highlight2 
+\par \cf0\highlight0               padding: 0 25px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             main h2 \{\cf1\highlight2 
+\par \cf0\highlight0               font-size: 18px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             main p \{\cf1\highlight2 
+\par \cf0\highlight0               font-size: 14px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             header \{\cf1\highlight2 
+\par \cf0\highlight0               padding-left: 20px;\cf1\highlight2 
+\par \cf0\highlight0               padding-right: 20px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             footer \{\cf1\highlight2 
+\par \cf0\highlight0               overflow: hidden;\cf1\highlight2 
+\par \cf0\highlight0               width: 100%;\cf1\highlight2 
+\par \cf0\highlight0               margin-top: 50px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @media (min-width: 801px) and (max-height: 730px) \{\cf1\highlight2 
+\par \cf0\highlight0             .figure \{\cf1\highlight2 
+\par \cf0\highlight0               margin-top: 80px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0           @media (min-width: 801px) and (max-height: 600px) \{\cf1\highlight2 
+\par \cf0\highlight0             footer \{\cf1\highlight2 
+\par \cf0\highlight0               position: relative;\cf1\highlight2 
+\par \cf0\highlight0               margin: 135px auto 0;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0             .figure \{\cf1\highlight2 
+\par \cf0\highlight0               margin-top: 50px;\cf1\highlight2 
+\par \cf0\highlight0             \}\cf1\highlight2 
+\par \cf0\highlight0           \}\cf1\highlight2 
+\par \cf0\highlight0         </style>\cf1\highlight2 
+\par \cf0\highlight0     </head>\cf1\highlight2 
+\par \cf0\highlight0     <body>\cf1\highlight2 
+\par \cf0\highlight0       <header class="u-clearfix">\cf1\highlight2 
+\par \cf0\highlight0           <div class="logo">\cf1\highlight2 
+\par \cf0\highlight0             <a href="https://www.djangoproject.com/" target="_blank" rel="noopener">\cf1\highlight2 
+\par \cf0\highlight0               <h2>django</h2>\cf1\highlight2 
+\par \cf0\highlight0             </a>\cf1\highlight2 
+\par \cf0\highlight0           </div>\cf1\highlight2 
+\par \cf0\highlight0           <div class="release-notes">\cf1\highlight2 
+\par \cf0\highlight0             <p>View <a href="https://docs.djangoproject.com/en/3.1/releases/" target="_blank" rel="noopener">release notes</a> for Django 3.1</p>\cf1\highlight2 
+\par \cf0\highlight0           </div>\cf1\highlight2 
+\par \cf0\highlight0       </header>\cf1\highlight2 
+\par \cf0\highlight0       <main>\cf1\highlight2 
+\par \cf0\highlight0         <div class="figure">\cf1\highlight2 
+\par \cf0\highlight0           <svg class="figure__animation" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">\cf1\highlight2 
+\par \cf0\highlight0             <path fill="#FFF" d="M0 0h512v512H0z"></path>\cf1\highlight2 
+\par \cf0\highlight0             <text transform="translate(97.173 475.104)"></text>\cf1\highlight2 
+\par \cf0\highlight0             <path d="M307.2 224.6c0 4.6-.5 9-1.6 13.2-2.5-4.4-5.6-8.4-9.2-12-4.6-4.6-10-8.4-16-11.2 2.8-11.2 4.5-22.9 5-34.6 1.8 1.4 3.5 2.9 5 4.5 10.5 10.3 16.8 24.5 16.8 40.1zM232.2 214.6c-6 2.8-11.4 6.6-16 11.2-3.5 3.6-6.6 7.6-9.1 12-1-4.3-1.6-8.7-1.6-13.2 0-15.7 6.3-29.9 16.6-40.1 1.6-1.6 3.3-3.1 5.1-4.5.6 11.8 2.2 23.4 5 34.6z" fill="#2E3B39"></path>\cf1\highlight2 
+\par \cf0\highlight0             <path class="body" d="M279.7 217.6c12.9-48.1 5.1-104-23.4-142.6-28.5 38.5-36.2 94.5-23.4 142.6h46.8z" fill="#FF7058"></path>\cf1\highlight2 
+\par \cf0\highlight0             <path class="tip" d="M273 104.7c-4.4-10.6-9.9-20.6-16.6-29.7-6.7 9-12.2 19-16.6 29.7H273z" fill="#2E3B39"></path>\cf1\highlight2 
+\par \cf0\highlight0             <circle cx="256.3" cy="144.8" fill="#FFF" r="15.5"></circle>\cf1\highlight2 
+\par \cf0\highlight0             <circle class="circle" cx="256.3" cy="144.8" fill="#84DBFF" r="12.2"></circle>\cf1\highlight2 
+\par \cf0\highlight0             <path class="removehole" d="M267.5 139.9l-16 16c4.5 2 9.8 1.1 13.5-2.5 3.6-3.7 4.5-9.1 2.5-13.5z" fill="#54C0EB"></path>\cf1\highlight2 
+\par \cf0\highlight0             <path class="fuel" d="M276.8 234.9c.4-2.4.6-5.1.6-7.9 0-12.1-3.9-21.8-8.8-21.8s-8.8 9.8-8.8 21.8c0 2.8.2 5.4.6 7.9h16.4zM252.3 234.9c.4-2.4.6-5.1.6-7.9 0-12.1-3.9-21.8-8.8-21.8-4.8 0-8.8 9.8-8.8 21.8 0 2.8.2 5.4.6 7.9h16.4z" fill="#FFD05B"></path>\cf1\highlight2 
+\par \cf0\highlight0             <path class="smoke" d="M416.6 358.8c0-1.8-.4-3.6-1-5.2-2.1-5.6-7.5-9.6-13.8-9.6-.7 0-1.4.1-2.1.2-.3-9.6-8.2-17.3-17.9-17.3-2.1 0-4.2.4-6.1 1.1-3-5.6-8.9-9.4-15.7-9.4-.5 0-1 0-1.5.1-.5 0-1-.1-1.5-.1-6.8 0-12.7 3.8-15.7 9.4-1.9-.7-3.9-1.1-6.1-1.1-9.9 0-17.9 8-17.9 17.9 0 1.1.1 2.3.3 3.3-.9-.2-1.8-.3-2.8-.3-5.1 0-9.5 2.6-12.1 6.5-2.2-1.4-4.9-2.3-7.8-2.3-7.6 0-13.8 5.9-14.4 13.3h-.1c-5.9 0-11 3.6-13.2 8.7-2.6-3-6.5-5-10.9-5h-.1-.5-.1-.1c-4.3 0-8.2 1.9-10.9 5-2.2-5.1-7.3-8.7-13.2-8.7h-.1c-.6-7.5-6.8-13.3-14.4-13.3-2.9 0-5.5.8-7.8 2.3-2.6-3.9-7-6.5-12.1-6.5-.9 0-1.9.1-2.8.3.2-1.1.3-2.2.3-3.3 0-9.9-8-17.9-17.9-17.9-2.1 0-4.2.4-6.1 1.1-3-5.6-8.9-9.4-15.7-9.4-.5 0-1 0-1.5.1-.5 0-1-.1-1.5-.1-6.8 0-12.7 3.8-15.7 9.4-1.9-.7-3.9-1.1-6.1-1.1-9.7 0-17.6 7.7-17.9 17.3-.7-.1-1.4-.2-2.1-.2-6.3 0-11.7 4-13.8 9.6-.6 1.6-1 3.4-1 5.2 0 4 1.6 7.6 4.2 10.3-.5 1.2-.8 2.6-.8 4 0 6 4.9 10.9 10.9 10.9H402c6 0 10.9-4.9 10.9-10.9 0-1.4-.3-2.8-.8-4 2.9-2.7 4.5-6.3 4.5-10.3z" fill="#E6E9EE"></path>\cf1\highlight2 
+\par \cf0\highlight0             <rect class="exhaust" fill="#6DDCBD" x="241" y="220" width="30" height="8"></rect>\cf1\highlight2 
+\par \cf0\highlight0             <rect class="exhaust two" fill="#FF871C" x="245" y="231" width="20" height="9"></rect>\cf1\highlight2 
+\par \cf0\highlight0             <rect class="exhaust__line" fill="#E6E9EE" x="252" y="240" width="7" height="90"></rect>\cf1\highlight2 
+\par \cf0\highlight0             <path class="flame" d="M 6.7 1.14 l 2.8 4.7 s 1.3 3 -1.82 3.22 l -5.4 0 s -3.28 -.14 -1.74 -3.26 l 2.76 -4.7 s 1.7 -2.3 3.4 0 z" fill="#AA2247"></path>\cf1\highlight2 
+\par \cf0\highlight0           </svg>\cf1\highlight2 
+\par \cf0\highlight0         </div>\cf1\highlight2 
+\par \cf0\highlight0         <h2>The install worked successfully! Congratulations!</h2>\cf1\highlight2 
+\par \cf0\highlight0         <p>You are seeing this page because <a href="https://docs.djangoproject.com/en/3.1/ref/settings/#debug" target="_blank" rel="noopener">DEBUG=True</a> is in your settings file and you have not configured any URLs.</p>\cf1\highlight2 
+\par \cf0\highlight0       </main>\cf1\highlight2 
+\par \cf0\highlight0       <footer class="u-clearfix">\cf1\highlight2 
+\par \cf0\highlight0         <a href="https://docs.djangoproject.com/en/3.1/" target="_blank" rel="noopener">\cf1\highlight2 
+\par \cf0\highlight0         <div class="option one">\cf1\highlight2 
+\par \cf0\highlight0             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\cf1\highlight2 
+\par \cf0\highlight0                 <defs>\cf1\highlight2 
+\par \cf0\highlight0                     <path d="M0 0h24v24H0V0z" id="a"></path>\cf1\highlight2 
+\par \cf0\highlight0                 </defs>\cf1\highlight2 
+\par \cf0\highlight0                 <clipPath id="b">\cf1\highlight2 
+\par \cf0\highlight0                     <use overflow="visible" xlink:href="#a"></use>\cf1\highlight2 
+\par \cf0\highlight0                 </clipPath>\cf1\highlight2 
+\par \cf0\highlight0                 <path clip-path="url(#b)" d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"></path>\cf1\highlight2 
+\par \cf0\highlight0             </svg>\cf1\highlight2 
+\par \cf0\highlight0             <div>\cf1\highlight2 
+\par \cf0\highlight0                 <h4>Django Documentation</h4>\cf1\highlight2 
+\par \cf0\highlight0\f1                 <p>Topics, references, &amp; how-to\rquote s</p>\cf1\highlight2\f0 
+\par \cf0\highlight0             </div>\cf1\highlight2 
+\par \cf0\highlight0         </div>\cf1\highlight2 
+\par \cf0\highlight0       </a>\cf1\highlight2 
+\par \cf0\highlight0       <a href="https://docs.djangoproject.com/en/3.1/intro/tutorial01/" target="_blank" rel="noopener">\cf1\highlight2 
+\par \cf0\highlight0         <div class="option two">\cf1\highlight2 
+\par \cf0\highlight0           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">\cf1\highlight2 
+\par \cf0\highlight0             <path d="M0 0h24v24H0V0z" fill="none"></path>\cf1\highlight2 
+\par \cf0\highlight0             <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"></path>\cf1\highlight2 
+\par \cf0\highlight0           </svg>\cf1\highlight2 
+\par \cf0\highlight0           <div>\cf1\highlight2 
+\par \cf0\highlight0             <h4>Tutorial: A Polling App</h4>\cf1\highlight2 
+\par \cf0\highlight0             <p>Get started with Django</p>\cf1\highlight2 
+\par \cf0\highlight0           </div>\cf1\highlight2 
+\par \cf0\highlight0         </div>\cf1\highlight2 
+\par \cf0\highlight0       </a>\cf1\highlight2 
+\par \cf0\highlight0       <a href="https://www.djangoproject.com/community/" target="_blank" rel="noopener">\cf1\highlight2 
+\par \cf0\highlight0         <div class="option three">\cf1\highlight2 
+\par \cf0\highlight0           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">\cf1\highlight2 
+\par \cf0\highlight0             <path d="M0 0h24v24H0z" fill="none"></path>\cf1\highlight2 
+\par \cf0\highlight0             <path d="M16.5 13c-1.2 0-3.07.34-4.5 1-1.43-.67-3.3-1-4.5-1C5.33 13 1 14.08 1 16.25V19h22v-2.75c0-2.17-4.33-3.25-6.5-3.25zm-4 4.5h-10v-1.25c0-.54 2.56-1.75 5-1.75s5 1.21 5 1.75v1.25zm9 0H14v-1.25c0-.46-.2-.86-.52-1.22.88-.3 1.96-.53 3.02-.53 2.44 0 5 1.21 5 1.75v1.25zM7.5 12c1.93 0 3.5-1.57 3.5-3.5S9.43 5 7.5 5 4 6.57 4 8.5 5.57 12 7.5 12zm0-5.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 5.5c1.93 0 3.5-1.57 3.5-3.5S18.43 5 16.5 5 13 6.57 13 8.5s1.57 3.5 3.5 3.5zm0-5.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"></path>\cf1\highlight2 
+\par \cf0\highlight0           </svg>\cf1\highlight2 
+\par \cf0\highlight0           <div>\cf1\highlight2 
+\par \cf0\highlight0             <h4>Django Community</h4>\cf1\highlight2 
+\par \cf0\highlight0             <p>Connect, get help, or contribute</p>\cf1\highlight2 
+\par \cf0\highlight0           </div>\cf1\highlight2 
+\par \cf0\highlight0         </div>\cf1\highlight2 
+\par \cf0\highlight0       </a>\cf1\highlight2 
+\par \cf0\highlight0       </footer>\cf1\highlight2 
+\par \cf0\highlight0     </body>\cf1\highlight2 
+\par \cf0\highlight0 </html>\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo systemctl status gunicorn\cf1\highlight2 
+\par \cf3\highlight0\u9679?\cf0  gunicorn.service - gunicorn daemon\cf1\highlight2 
+\par \cf0\highlight0      Loaded: loaded (/etc/systemd/system/gunicorn.service; disabled; vendor preset: enabled)\cf1\highlight2 
+\par \cf0\highlight0      Active: \cf3 active (running)\cf0  since Tue 2020-09-01 16:50:11 UTC; 18s ago\cf1\highlight2 
+\par \cf0\highlight0 TriggeredBy: \cf3\u9679?\cf0  gunicorn.socket\cf1\highlight2 
+\par \cf0\highlight0    Main PID: 61313 (gunicorn)\cf1\highlight2 
+\par \cf0\highlight0       Tasks: 4 (limit: 1137)\cf1\highlight2 
+\par \cf0\highlight0      Memory: 90.6M\cf1\highlight2 
+\par \cf0\highlight0      CGroup: /system.slice/gunicorn.service\cf1\highlight2 
+\par \cf0\highlight0              \u9500?\u9472?61313 /home/masit/masitdir/masitenv/bin/python /home/masit/masitdir/masitenv/bin/gunicorn --access-logfile - --workers\cf1\highlight12 >\highlight2 
+\par \cf0\highlight0              \u9500?\u9472?61325 /home/masit/masitdir/masitenv/bin/python /home/masit/masitdir/masitenv/bin/gunicorn --access-logfile - --workers\cf1\highlight12 >\highlight2 
+\par \cf0\highlight0              \u9500?\u9472?61326 /home/masit/masitdir/masitenv/bin/python /home/masit/masitdir/masitenv/bin/gunicorn --access-logfile - --workers\cf1\highlight12 >\highlight2 
+\par \cf0\highlight0              \u9492?\u9472?61327 /home/masit/masitdir/masitenv/bin/python /home/masit/masitdir/masitenv/bin/gunicorn --access-logfile - --workers\cf1\highlight12 >\highlight2 
+\par 
+\par \cf0\highlight0 Sep 01 16:50:11 masit systemd[1]: Started gunicorn daemon.\cf1\highlight2 
+\par \cf0\highlight0 Sep 01 16:50:12 masit gunicorn[61313]: [2020-09-01 16:50:12 +0000] [61313] [INFO] Starting gunicorn 20.0.4\cf1\highlight2 
+\par \cf0\highlight0 Sep 01 16:50:12 masit gunicorn[61313]: [2020-09-01 16:50:12 +0000] [61313] [INFO] Listening at: unix:/run/gunicorn.sock (61313)\cf1\highlight2 
+\par \cf0\highlight0 Sep 01 16:50:12 masit gunicorn[61313]: [2020-09-01 16:50:12 +0000] [61313] [INFO] Using worker: sync\cf1\highlight2 
+\par \cf0\highlight0 Sep 01 16:50:12 masit gunicorn[61325]: [2020-09-01 16:50:12 +0000] [61325] [INFO] Booting worker with pid: 61325\cf1\highlight2 
+\par \cf0\highlight0 Sep 01 16:50:12 masit gunicorn[61326]: [2020-09-01 16:50:12 +0000] [61326] [INFO] Booting worker with pid: 61326\cf1\highlight2 
+\par \cf0\highlight0 Sep 01 16:50:12 masit gunicorn[61327]: [2020-09-01 16:50:12 +0000] [61327] [INFO] Booting worker with pid: 61327\cf1\highlight2 
+\par \cf0\highlight0 Sep 01 16:50:12 masit gunicorn[61325]:  - - [01/Sep/2020:16:50:12 +0000] "GET / HTTP/1.1" 200 16351 "-" "curl/7.68.0"\cf1\highlight2 
+\par \highlight12 lines 1-21/21 (END)\highlight2 
+\par \cf0\highlight0 [1]+  Stopped                 sudo systemctl status gunicorn\cf1\highlight2 
+\par \cf0\highlight0 ^[[B^X^[[B^C^C\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo systemctl daemon-reload\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo systemctl restart gunicorn\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo nano /etc/nginx/sites-available/masitproject\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo ln -s /etc/nginx/sites-available/masitproject /etc/nginx/sites-enabled\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo nginx -t\cf1\highlight2 
+\par \cf0\highlight0 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok\cf1\highlight2 
+\par \cf0\highlight0 nginx: configuration file /etc/nginx/nginx.conf test is successful\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo systemctl restart nginx\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo ufw delete allow 8000\cf1\highlight2 
+\par \cf0\highlight0 Rules updated\cf1\highlight2 
+\par \cf0\highlight0 Rules updated (v6)\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$ sudo ufw allow 'Nginx Full'\cf1\highlight2 
+\par \cf0\highlight0 Rules updated\cf1\highlight2 
+\par \cf0\highlight0 Rules updated (v6)\cf1\highlight2 
+\par \cf0\highlight0 masit@masit:~/masitdir$\cf1\highlight2 
+\par \pard\cf0\highlight0\f2 
+\par }
+ 

@@ -1,7 +1,6 @@
 const { src, dest, parallel, series, watch } = require("gulp");
 
 // Load plugins
-
 const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
@@ -16,9 +15,9 @@ const livereload = require("gulp-livereload");
 const fileinclude = require("gulp-file-include");
 const browsersync = require("browser-sync").create();
 
-// Clean assets
+// Clean static
 function clear() {
-  return src("./assets/*", {
+  return src("./static/*", {
     read: false,
   }).pipe(clean());
 }
@@ -36,7 +35,7 @@ function minify() {
       })
     )
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest("./assets/"))
+    .pipe(dest("./templates/"))
     .pipe(browsersync.stream());
 }
 
@@ -44,37 +43,36 @@ function minify() {
 function js() {
   const source = "./src/js/*.js";
 
-  return (
-    src(source)
-      .pipe(changed(source))
-      .pipe(concat('bundle.js'))
-      .pipe(uglify())
-      .pipe(
-        rename({
-          extname: ".min.js",
-        })
-      )
-      .pipe(dest("./assets/js/"))
-      .pipe(browsersync.stream())
-  );
+  return src(source)
+    .pipe(changed(source))
+    .pipe(concat("bundle.js"))
+    .pipe(uglify())
+    .pipe(
+      rename({
+        extname: ".min.js",
+      })
+    )
+    .pipe(dest("./static/js/"))
+    .pipe(browsersync.stream());
 }
-//css
 
+//css
 function css() {
   const source = "./src/css/*.css";
   return src(source)
-        .pipe(changed(source))
-        .pipe(dest("./assets/css/"))
-        .pipe(browsersync.stream());
+    .pipe(changed(source))
+    .pipe(dest("./static/css/"))
+    .pipe(browsersync.stream());
 }
 
 function minjs() {
-    const source = "./src/minjs/*.js";
-    return src(source)
-          .pipe(changed(source))
-          .pipe(dest("./assets/js/"))
-          .pipe(browsersync.stream());
-  }
+  const source = "./src/minjs/*.js";
+  return src(source)
+    .pipe(changed(source))
+    .pipe(uglify())
+    .pipe(dest("./static/js/"))
+    .pipe(browsersync.stream());
+}
 
 // SCSS function
 function scss() {
@@ -95,22 +93,24 @@ function scss() {
       })
     )
     .pipe(cssnano())
-    .pipe(dest("./assets/css/"))
+    .pipe(dest("./static/css/"))
     .pipe(browsersync.stream());
 }
 
 // Optimize images
 function img() {
-  return src("./src/img/*/*").pipe(imagemin()).pipe(dest("./assets/img"));
+  return src("./src/img/*")
+        .pipe(imagemin())
+        .pipe(dest("./static/img/"));
 }
 
 function font() {
-  return src("./src/fonts/*.*").pipe(dest("./assets/fonts"));
+  return src("./src/fonts/*.*").pipe(dest("./static/fonts/"));
 }
 
 // Watch files
 function watchFiles() {
-  watch("./src/scss/*", css);
+  watch("./src/scss/*", scss);
   watch("./src/js/*", js);
   watch("./src/img/*/*", img);
   watch("./src/parts/*.html", minify);
@@ -119,20 +119,21 @@ function watchFiles() {
 }
 
 // BrowserSync
-
 function browserSync() {
   browsersync.init({
     server: {
-      baseDir: "./assets/",
+      baseDir: "./",
     },
     port: 3000,
   });
 }
 
 // Tasks to define the execution of the functions simultaneously or in series
-
 exports.watch = series(
   clear,
   parallel(watchFiles, browserSync, minjs, js, font, css, scss, minify, img)
 );
 exports.default = series(clear, parallel(js, scss, img));
+
+exports.img = series(img);
+exports.fonts = series(font);

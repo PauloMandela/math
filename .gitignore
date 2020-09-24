@@ -13,6 +13,7 @@ node_modules/
 
 # Папка с собранными файлами проекта
 # build/
-assets/
+static/
+templates/
 src/img/
 src/fonts/
