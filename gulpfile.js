@@ -61,6 +61,13 @@ function css() {
   const source = "./src/css/*.css";
   return src(source)
     .pipe(changed(source))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 4 versions"],
+        cascade: false,
+      })
+    )
+    .pipe(cssnano())
     .pipe(dest("./static/css/"))
     .pipe(browsersync.stream());
 }
@@ -136,4 +143,4 @@ exports.watch = series(
 exports.default = series(clear, parallel(js, scss, img));
 
 exports.img = series(img);
-exports.fonts = series(font);
+exports.fonts = series(minjs);

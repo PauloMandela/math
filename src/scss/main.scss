@@ -640,15 +640,16 @@ footer .twitter-share-button {
 }
 
 .toggle {
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  // -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  // -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-  margin: -24px;
+  // margin: -24px;
   position: absolute;
-  bottom: 11.6%;
+  // bottom: 11.6%;
   // left: 50%;
   top: 50px;
-  right: 50px;
+  right: 50%;
+  transform: translateX(50%);
 }
 .toggle.i .cross {
   -webkit-transform: rotateZ(0deg);
@@ -1352,7 +1353,7 @@ footer .twitter-share-button {
   }
 
   .toggle {
-    bottom: 12%;
+    // bottom: 12%;
   }
 
   .prompt .panel img {
@@ -1530,8 +1531,8 @@ footer .twitter-share-button {
   }
 
   .toggle {
-    margin: -28px;
-    bottom: 15%;
+    // margin: -28px;
+    // bottom: 15%;
   }
 
   .title {
@@ -1797,8 +1798,8 @@ footer .twitter-share-button {
   }
 
   .toggle {
-    margin: -24px;
-    bottom: 12%;
+    // margin: -24px;
+    // bottom: 12%;
   }
 
   .title {
@@ -2682,4 +2683,45 @@ html.touch .toggle.tap .y {
 html.touch .links a.tap {
   background-color: #d92400;
   color: #ffffff;
+}
+
+#menu {
+  width: 100%;
+  background-image: linear-gradient(180deg, rgba(156, 156, 156,33%), #0000);;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+    margin: 10px;
+    color: #000;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+}
+
+#lets-go {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  transform: translateX(-50%);
+  display: block;
+  border: 1px solid gray;
+  border-radius: 20px;
+  background-color: aqua;
+  z-index: 9;
+  overflow: hidden;
+  a {
+    width: 100%;
+    display: inherit;
+    height: 100%;
+  }
 }
