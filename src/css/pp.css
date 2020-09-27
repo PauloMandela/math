@@ -201,19 +201,16 @@ p{
 	background: rgba(0,0,0, 0.5);
 	color: #fff;
 }
-#menu li a{
-	text-decoration:none;
-	color: #000;
-}
+
 #menu li.active a:hover{
 	color: #000;
 }
 #menu li:hover{
 	background: rgba(255,255,255, 0.8);
 }
-#menu li a,
+
 #menu li.active a{
-	padding: 9px 18px;
+	padding: 5px 10px;
 	display:block;
 }
 #menu li.active a{

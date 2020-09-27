@@ -26,7 +26,7 @@
 		$(document).ready(function () {
 			$('#pagepiling').pagepiling({
 				menu: '#menu',
-				anchors: ['page1', 'page2', 'page3'],
+				anchors: ['page1', 'page2', 'page3', 'page4'],
 				navigation: {
 					'textColor': '#f2f2f2',
 					'bulletsColor': '#ccc',
@@ -36,9 +36,6 @@
 			});
 
 		});
-		function myFunction() {
-			window.scrollTo(100, 100)
-		}
 	</script>
 
 	<style>
@@ -76,12 +73,12 @@
 
 		#section2 {
 			/* background-image: url(../static/img/panel.jpg); */
-			padding: 6% 0 0 0;
+			/* padding: 6% 0 0 0; */
 		}
 
 		#section3 {
 			background-image: url(../static/img/bg3.jpg);
-			padding: 6% 0 0 0;
+			/* padding: 6% 0 0 0; */
 		}
 
 		#section3 h1 {
@@ -123,8 +120,8 @@
 		}
 
 		.splide-block {
-			height: 300px;
-			width: 200px;
+			height: 100vh;
+			width: 25vw;
 			display: inline-block;
 			background: yellow;
 		}
@@ -133,47 +130,86 @@
 			width: 100%;
 			height: 100%;
 		}
+
 		.splide__pagination {
 			display: none;
+		}
+
+		#myVideo {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+		}
+
+		#menu li a {
+			font-size: 16px;
+			font-family: gilroybold;
+			letter-spacing: 2px;
+			line-height: 19px;
+			padding-bottom: 6px;
+			text-transform: uppercase;
+			position: relative;
+			background: -webkit-gradient(linear, left top, left bottom, from(#e46b2d), to(#e46b2d));
+			background: linear-gradient(to bottom, #e46b2d 0, #e46b2d 100%);
+			background-position: 0 100%;
+			background-repeat: repeat-x;
+			background-size: 2px 2px;
+			text-decoration: none;
+			-webkit-transition: all .35s ease-in-out;
+			transition: all .35s ease-in-out;
 		}
 	</style>
 
 </head>
 
-<body id="body-container" onmousewheel="myFunction()">
-
-	<ul id="menu" style="z-index: 9;">
+<body id="body-container" onload="audi()">
+	<ul id="menu">
 		<li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
 		<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
 		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
+		<li data-menuanchor="page4"><a href="#page4">Page 4</a></li>
 	</ul>
 
 	<div id="pagepiling">
 		<div class="section" id="section1">
-			<div id="lets-go" data-menuanchor="page2"><a href="#page2">Başlalyň</a></div>
+			<div id="lets-go" data-menuanchor="page2"><a href="#page2">
+				<img src="../static/img/download.png" alt="">
+			</a></div>
 			<iframe src="prlx.html" frameborder="0" width="100%" height="100%"></iframe>
 		</div>
 		<div class="section" id="section2">
 			<div class="intro">
 				<div class="splide">
 					<div class="splide__track">
-						<ul class="splide__list" style="display: flex;">
+						<ul class="splide__list">
 							<li class="splide__slide">
 								<a href="#" class="splide-block">
-									<div style="background-color: red;"></div>
+									<div
+										style="background-color: red;background-image: url(../static/img/vishnya.jpg);">
+										<img src="../static/img/auqa1.png" alt="apple">
+									</div>
 								</a>
 							</li>
 							<li class="splide__slide">
 								<a href="#" class="splide-block">
-									<div style="background-color: gold;"></div>
+									<div
+										style="background-color: gold; background-image: url(../static/img/persik.jpg);">
+										<img src="../static/img/auqa2.png" alt="lemon">
+									</div>
 								</a></li>
 							<li class="splide__slide">
 								<a href="#" class="splide-block">
-									<div style="background-color: blue;"></div>
+									<div style="background-color: blue;background-image: url(../static/img/lemon.jpg);">
+										<img src="../static/img/auqa3.png" alt="pinaplle">
+									</div>
 								</a></li>
 							<li class="splide__slide">
 								<a href="#" class="splide-block">
-									<div style="background-color: rebeccapurple;"></div>
+									<div style="background-color: rebeccapurple;">
+										<img src="../static/img/auqa4.png" alt="apple">
+									</div>
 								</a></li>
 							<li class="splide__slide">
 								<a href="#" class="splide-block">
@@ -202,16 +238,32 @@
 				<p>Use the power of images</p>
 			</div>
 		</div>
+		<div class="section" id="section4">
+			<video autoplay muted loop id="myVideo">
+				<source src="../static/img/cola.mp4" type="video/mp4">
+			</video>
+		</div>
 	</div>
 	<script>
 		window.addEventListener('load', function () {
-            new Splide('.splide', {
-                autoWidth: true,
-                rewind: true,
-                type: "loop",
-            }).mount();
-        });
-
+			new Splide('.splide', {
+				autoWidth: true,
+				rewind: true,
+				type: "loop",
+			}).mount();
+		});
+		function audi() {
+			var source = "../static/img/volny.mp3"
+			var audio = document.createElement("audio");
+			//
+			audio.autoplay = true;
+			//
+			audio.load()
+			audio.addEventListener("load", function () {
+				audio.play();
+			}, true);
+			audio.src = source;
+		}
 	</script>
 </body>
 
