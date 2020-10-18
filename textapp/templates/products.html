@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tolkun</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="author" content="Alvaro Trigo Lopez">
+    <meta name="description" content="pagePiling.js plugin by Alvaro Trigo.">
+    <meta name="keywords"
+        content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery">
+    <meta name="Resource-type" content="Document">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <style>
+        
+        h1 {
+            font-size: 5em;
+            font-family: arial, helvetica;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Centered texts in each section
+	* --------------------------------------- */
+        .section {
+            text-align: center;
+            overflow: hidden;
+        }
+
+
+        /* Backgrounds will cover all the section
+	* --------------------------------------- */
+        #section1,
+        #section2,
+        #section3 {
+            background-size: auto;
+        }
+
+        /* Defining each section background and styles
+	* --------------------------------------- */
+        #section1 {
+            background-image: url({% static 'img/bg1.jpg' %});
+        }
+
+        #section2 {
+            /* background-image: url({% static 'img/panel.jpg' %}); */
+            /* padding: 6% 0 0 0; */
+        }
+
+        #section3 {
+            background-image: url({% static 'img/bg3.jpg' %});
+            /* padding: 6% 0 0 0; */
+        }
+
+        #section3 h1 {
+            color: #000;
+        }
+
+
+
+        #section1 h1 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 30px;
+            color: #fff;
+        }
+
+        #section2 .intro {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 30px;
+        }
+
+        #section2 h1,
+        #section2 p {
+            text-shadow: 1px 5px 20px #000;
+        }
+
+        #section3 h1,
+        #section3 p {
+            text-shadow: 1px 5px 20px #000;
+            color: #fff;
+        }
+
+        .splide-block {
+            height: 100vh;
+            width: 25vw;
+            display: inline-block;
+            background: yellow;
+        }
+
+        .splide-block div {
+            width: 100%;
+            height: 100%;
+        }
+
+        .splide__pagination {
+            display: none;
+        }
+
+        #myVideo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        #menu {
+            z-index: 9;
+        }
+
+        #menu li {
+            padding-bottom: 5px;
+        }
+
+        #menu li a {
+            outline: none;
+            font-size: 15px;
+        }
+
+        #menu li.active a {
+            color: yellowgreen;
+        }
+
+        #mutebtn {
+            z-index: 9999;
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            background: transparent;
+            width: 40px;
+            padding: 0;
+        }
+
+        #logo-link {
+            background-color: #fff !important;
+            border-radius: 50% !important;
+            background-image: none !important;
+        }
+
+        #logo-link img {
+            width: 150px;
+            transform: translateY(15px);
+        }
+    </style>
+    <style>
+        main {
+            display: flex;
+        }
+
+        .col-left {
+            width: 20%;
+            background-color: azure;
+        }
+
+        .col-right {
+            width: 80%;
+            background-color: aqua;
+        }
+
+        .col {
+            display: inline-block;
+            min-height: 100px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .onum-wrapper {
+            display: block;
+            width: 33vw;
+            height: 33vw;
+            position: relative;
+            margin: 40px 30px;
+        }
+
+        .onum-square {
+            width: 100%;
+            height: 100%;
+            transition: all .6s;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .onum-wrapper:hover .onum-square {
+            width: 80%;
+            height: 80%;
+            left: 10%;
+            top: 10%;
+            cursor: pointer;
+        }
+
+        .onum-wrapper:hover .onum-bottle {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+
+        .onum-wrapper:hover .produkt-title {
+            bottom: -40px;
+            z-index: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-flow: wrap;
+            transform: translateX(-100px);
+            margin-bottom: 100px;
+            width: calc(100% + 100px);
+        }
+
+        .onum-bottle {
+            left: 10%;
+            top: 10%;
+            position: absolute;
+            height: 80%;
+            width: 80%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center 10%;
+            z-index: 1;
+            transition: all .6s;
+        }
+
+        .produkt-title {
+            position: absolute;
+            bottom: 0;
+            transition: all .3s;
+            width: 100%;
+            text-align: center;
+            z-index: -1;
+        }
+
+        .aside-background {
+            width: 100%;
+            height: 100%;
+            transition: all .6s;
+            background-image: url({% static 'img/persik.jpg' %});
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-menuanchor="page2"><a href="#page2">Önümlerimiz</a></li>
+        <li data-menuanchor="page3"><a href="/about/">Biz barada</a></li>
+        <li data-menuanchor="page1" class="active" id="logo-link"><a href="/"><img
+                    src="{% static 'img/logo.png'%}" alt=""></a></li>
+        <li data-menuanchor="page4"><a href="#page4">Zawodlarymyz</a></li>
+        <li data-menuanchor="page5"><a href="#page5">Habarlaşmak üçin</a></li>
+    </ul>
+    <main>
+        <aside class="col-left col">
+            <div class="aside-background"></div>
+        </aside>
+        <div class="col-right col">
+            <header style="margin-top: 100px;">
+                <h1>Biziň önümlerimiz</h1>
+            </header>
+            <div class="container">
+                <div class="onum-wrapper" data-img="20px 40px">
+                    <div class="onum-bottle" style="background-image: url({% static 'img/auqa1.png' %});"></div>
+                    <div class="onum-square" style="background-color: red;"></div>
+                    <p class="produkt-title">Name of produckt</p>
+                </div>
+                <div class="onum-wrapper" data-img="30px 50px">
+                    <div class="onum-bottle" style="background-image: url({% static 'img/auqa2.png' %});"></div>
+                    <div class="onum-square" style="background-color: cornflowerblue;"></div>
+                    <p class="produkt-title">Name of produckt</p>
+                </div>
+                <div class="onum-wrapper" data-img="20px 6  0px">
+                    <div class="onum-bottle" style="background-image: url({% static 'img/auqa1.png' %});"></div>
+                    <div class="onum-square" style="background-color: red;"></div>
+                    <p class="produkt-title">Name of produckt</p>
+                </div>
+                <div class="onum-wrapper" data-img="120px 40px">
+                    <div class="onum-bottle" style="background-image: url({% static 'img/auqa2.png' %});"></div>
+                    <div class="onum-square" style="background-color: cornflowerblue;"></div>
+                    <p class="produkt-title">Name of produckt</p>
+                </div>
+                <div class="onum-wrapper" data-img="20px 140px">
+                    <div class="onum-bottle" style="background-image: url({% static 'img/auqa1.png' %});"></div>
+                    <div class="onum-square" style="background-color: red;"></div>
+                    <p class="produkt-title">Name of produckt</p>
+                </div>
+                <div class="onum-wrapper" data-img="20px 40px">
+                    <div class="onum-bottle" style="background-image: url({% static 'img/auqa2.png' %});"></div>
+                    <div class="onum-square" style="background-color: cornflowerblue;"></div>
+                    <p class="produkt-title">Name of produckt</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <style>
+        .flex {
+            /*Flexbox for containers*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .waves {
+            position: relative;
+            width: 100%;
+            height: 15vh;
+            margin-bottom: -7px;
+            /*Fix for safari gap*/
+            min-height: 100px;
+            max-height: 150px;
+        }
+
+        .content {
+            position: relative;
+            height: 20vh;
+            text-align: center;
+            background-color: #0082e0;
+        }
+
+        /* Animation */
+        .parallax>use {
+            animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+        }
+
+        .parallax>use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+
+        .parallax>use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+
+        .parallax>use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+
+        .parallax>use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px, 0, 0);
+            }
+
+            100% {
+                transform: translate3d(85px, 0, 0);
+            }
+        }
+
+        /*Shrinking for mobile*/
+        @media (max-width: 768px) {
+            .waves {
+                height: 30px;
+                min-height: 30px;
+            }
+
+        }
+
+        .footer {
+            margin-top: -100px;
+        }
+    </style>
+    <div class="footer">
+        <!--Waves Container-->
+        <div><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="#0082e066" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="#0082e099" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="#0082e033" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#0082e0" />
+                </g>
+            </svg></div>
+        <!--Waves end-->
+        <div class="content">
+            <p style="margin-top: 30px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nihil? Enim
+                sunt rerum et sit tempore saepe officiis consectetur velit cum nulla distinctio vitae fugit
+                necessitatibus delectus, ducimus quasi dolorem.</p>
+        </div>
+    </div>
+    <style>
+        .content p {
+            position: absolute;
+        }
+    </style>
+    <script>$(document).ready(function () {
+            $('.onum-wrapper').mouseover(function () {
+                img = $(this).attr('data-img')
+                $('.aside-background').css('background-position', img)
+            });
+        });</script>
+</body>
+
+</html>

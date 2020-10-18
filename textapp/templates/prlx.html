@@ -1,0 +1,280 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>tolkun.suwlary</title><!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<!-- Core Meta Data -->
+	<meta name="author" content="Matthew tolkun.suwlary">
+	<meta name="description"
+		content="Simple, lightweight tolkun.suwlary Engine that reacts to the orientation of a smart device">
+	<meta name="keywords" content="tolkun.suwlary,javascript,jquery,zepto,plugin"><!-- Open Graph Meta Data -->
+	<meta property="og:description"
+		content="Simple, lightweight tolkun.suwlary Engine that reacts to the orientation of a smart device">
+	<meta property="og:image" content="http://tolkun.suwlary.tolkun.suwlary.io/tolkun.suwlary/img/thumbnail.png">
+	<meta property="og:site_name" content="tolkun.suwlary">
+	<meta property="og:title" content="tolkun.suwlary">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://tolkun.suwlary.tolkun.suwlary.io/tolkun.suwlary/index.html">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="http://tolkun.suwlary.tolkun.suwlary.io/tolkun.suwlary/index.html">
+	<meta name="twitter:creator" content="@tolkun.suwlary">
+	<meta name="twitter:title" content="tolkun.suwlary">
+	<meta name="twitter:description"
+		content="Simple, lightweight tolkun.suwlary Engine that reacts to the orientation of a smart device">
+	<meta name="twitter:image" content="http://tolkun.suwlary.tolkun.suwlary.io/tolkun.suwlary/img/thumbnail.png">
+	<!-- Humans -->
+	<link rel="author" href="humans.txt"><!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.min.css' %}"><!-- Favicon -->
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.png" type="image/png">
+	<link rel="shortcut icon" href="http://tolkun.suwlary.tolkun.suwlary.io/tolkun.suwlary/favicon.png"
+		type="image/png"><!-- Apple Touch Icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57-precomposed.png">
+	<!-- Apple Startup Images -->
+	<link rel="apple-touch-startup-image" href="apple-touch-startup-image-320x460.png" media="(device-width: 320px)">
+	<link rel="apple-touch-startup-image" href="apple-touch-startup-image-640x920.png"
+		media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)">
+	<link rel="apple-touch-startup-image" href="apple-touch-startup-image-768x1004.png"
+		media="(device-width: 768px) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="apple-touch-startup-image-748x1024.png"
+		media="(device-width: 768px) and (orientation: landscape)">
+	<link rel="apple-touch-startup-image" href="apple-touch-startup-image-1536x2008.png"
+		media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
+	<link rel="apple-touch-startup-image" href="apple-touch-startup-image-2048x1496.png"
+		media="(device-width: 1536px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
+	<!-- <style>
+		#myVideo {
+			position: fixed;
+			right: -10%;
+			bottom: -10%;
+			min-width: 120%;
+			min-height: 120%;
+		}
+	</style> -->
+</head>
+
+<body style="overflow: hidden; background-color: #e5f6fb;">
+	<div id="container" class="wrapper" style="background-color: #9edcef44;">
+		<ul id="scene" style="margin-top: 75px;" class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1"
+			data-scalar-x="25" data-scalar-y="15">
+			<li class="layer" data-depth="0.00"></li>
+			<li class="layer" data-depth="0.10">
+				<div class="background"></div>
+				<!-- <video autoplay muted loop id="myVideo">
+					<source src="../static/img/cola.mp4" type="video/mp4">
+				</video> -->
+			</li>
+			<li class="layer" data-depth="0.10">
+				<div class="light purple c phase-5"></div>
+			</li>
+			<!--
+			<li class="layer" data-depth="0.10">
+				<div class="light orange d phase-3"></div>
+			</li> -->
+			<li class="layer" data-depth="0.15">
+				<ul class="rope depth">
+					<!-- <li><img src="../static/img/rope.png" alt="Rope"></li> -->
+					<li class="hanger position-2">
+						<div class="board cloud-2"></div>
+					</li>
+					<li class="hanger position-8">
+						<div class="board cloud-1"></div>
+					</li>
+					<li class="hanger position-4">
+						<div class="board birds"></div>
+					</li>
+				</ul>
+			</li>
+			<li class="layer" data-depth="0.20">
+				<h1 class="title"><img src="{% static 'img/logo.png' %}" alt=""></h1>
+			</li>
+			<!-- <li class="layer" data-depth="0.30">
+				<ul class="rope depth-30">
+					<li><img src="../static/img/rope.png" alt="Rope"></li>
+					<li class="hanger position-1">
+						<div class="board cloud-1 swing-3"></div>
+					</li>
+					<li class="hanger position-5">
+						<div class="board cloud-4 swing-1"></div>
+					</li>
+				</ul>
+			</li> -->
+			<!-- <li class="layer" data-depth="0.30">
+				<div class="wave paint depth-30"></div>
+			</li> -->
+			<li class="layer" data-depth="0.40">
+				<div class="wave plain depth-40"></div>
+			</li>
+			<li class="layer" data-depth="0.30">
+				<div class="light orange b phase-4 depth-30"></div>
+			</li>
+			<li class="layer" data-depth="0.50">
+				<div class="boat depth-50"></div>
+			</li>
+			<li class="layer" data-depth="0.50">
+				<div class="wave paint depth-50"></div>
+			</li>
+			<li class="layer" data-depth="0.60">
+				<div class="lighthouse depth-60"></div>
+			</li>
+			<!-- <li class="layer" data-depth="0.60">
+				<ul class="rope depth-60">
+					<li><img src="../static/img/rope.png" alt="Rope"></li>
+					<li class="hanger position-3">
+						<div class="board birds swing-5"></div>
+					</li>
+					<li class="hanger position-6">
+						<div class="board cloud-2 swing-2"></div>
+					</li>
+					<li class="hanger position-8">
+						<div class="board cloud-3 swing-4"></div>
+					</li>
+				</ul>
+			</li> -->
+			<li class="layer" data-depth="0.60">
+				<div class="wave plain depth-60"></div>
+			</li>
+			<!-- <li class="layer" data-depth="0.80">
+				<div class="wave plain depth-80"></div>
+			</li> -->
+			<li class="layer" data-depth="0.80">
+				<div class="wave paint depth-80"></div>
+			</li>
+		</ul>
+		<!-- <section id="about" class="wrapper about hide accelerate">
+			<div class="cell accelerate">
+				<div class="cables center accelerate">
+					<div class="panel accelerate">
+						<header>
+							<h1>tolkun.suwlary<em>.js</em></h1>
+						</header>
+						<p>WOW, that's deep man! <strong>tolkun.suwlary</strong> best better and in gowy beaver types
+							ever
+							<strong>tolkun.suwlary</strong> ichip gor. Radical.</p>
+						<p>This project is a collaboration between<br><a href="mailto:paulo.mandela@mail.ru"
+								target="_blank">Paulo Mandela</a> &amp; <a href="mailto:begench.suhanov@mail.ru"
+								target="_blank">Begench Suhanov</a>;)</p>
+
+						<ul class="links">
+							<li><a class="download" href="pilling.html">Sargyt goý</a></li>
+							<li><a class="github" target="_blank"
+									href="https://tolkun.suwlary.com/tolkun.suwlary/tolkun.suwlary">tolkun.suwlary</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- <button id="toggle" class="toggle i">
+			<div class="cross">
+				<div class="x"></div>
+				<div class="y"></div>
+			</div>
+		</button> -->
+		<!-- <div id="prompt" class="wrapper prompt hide accelerate">
+			<div class="cell accelerate">
+				<div class="panel center unselectable accelerate">
+					<button id="dismiss" class="dismiss">
+						<div class="cross">
+							<div class="x"></div>
+							<div class="y"></div>
+						</div>
+					</button>
+					<div class="tilt-scene">
+						<img class="tilt" src="../static/img/tilt.png">
+					</div>
+					<h2>Tolkun bilen has gyzykly!</h2>
+					<p>Web-sahypada gyzykly bolmagy uchin ykjam enjamynda bar bolan gyroskopy ishlet</p>
+					<p>(iPad-larda has gowy bolyar)</p>
+				</div>
+			</div>
+		</div> -->
+		<footer></footer>
+	</div><!-- Scripts -->
+	<script src="{% static 'js/bundle.min.js' %}"></script>
+	<script src="{% static 'js/jq.js' %}"></script>
+	<script>// jQuery Selections
+		var $html = $('html'),
+			$container = $('#container'),
+			$prompt = $('#prompt'),
+			$toggle = $('#toggle'),
+			$about = $('#about'),
+			$scene = $('#scene');
+
+		// Hide browser menu.
+		(function () {
+			setTimeout(function () { window.scrollTo(0, 0); }, 0);
+		})();
+
+		// Setup FastClick.
+		FastClick.attach(document.body);
+
+		// Add touch functionality.
+		if (Hammer.HAS_TOUCHEVENTS) {
+			$container.hammer({ drag_lock_to_axis: true });
+			_.tap($html, 'a,button,[data-tap]');
+		}
+
+		// Add touch or mouse class to html element.
+		$html.addClass(Hammer.HAS_TOUCHEVENTS ? 'touch' : 'mouse');
+
+		// Resize handler.
+		(resize = function () {
+			$scene[0].style.width = window.innerWidth + 'px';
+			$scene[0].style.height = window.innerHeight + 'px';
+			if (!$prompt.hasClass('hide')) {
+				if (window.innerWidth < 600) {
+					$toggle.addClass('hide');
+				} else {
+					$toggle.removeClass('hide');
+				}
+			}
+		})();
+
+		// Attach window listeners.
+		// window.onresize = _.debounce(resize, 200);
+		// window.onscroll = _.debounce(resize, 200);
+
+		function showDetails() {
+			$about.removeClass('hide');
+			$toggle.removeClass('i');
+		}
+
+		function hideDetails() {
+			$about.addClass('hide');
+			$toggle.addClass('i');
+		}
+
+		// Listen for toggle click event.
+		$toggle.on('click', function (event) {
+			$toggle.hasClass('i') ? showDetails() : hideDetails();
+		});
+
+		// Pretty simple huh?
+		$scene.parallax();
+
+		// Check for orientation support.
+		setTimeout(function () {
+			if ($scene.data('mode') === 'cursor') {
+				$prompt.removeClass('hide');
+				if (window.innerWidth < 600) $toggle.addClass('hide');
+				$prompt.on('click', function (event) {
+					$prompt.addClass('hide');
+					if (window.innerWidth < 600) {
+						setTimeout(function () {
+							$toggle.removeClass('hide');
+						}, 1200);
+					}
+				});
+			}
+		}, 1000);</script>
+</body>
+
+</html>
