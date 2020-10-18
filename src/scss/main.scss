@@ -826,7 +826,8 @@ footer .twitter-share-button {
   top: -5%;
 }
 
-.lighthouse, .boat {
+.lighthouse,
+.boat {
   -webkit-transform-origin: 50% 90%;
   -moz-transform-origin: 50% 90%;
   transform-origin: 50% 90%;
@@ -1031,7 +1032,6 @@ footer .twitter-share-button {
 .board.cloud-1 {
   background-image: url(../img/board-cloud-1.png);
   transform: translate(-50px, -50px);
-
 }
 .board.cloud-2 {
   background-image: url(../img/board-cloud-2.png);
@@ -1111,8 +1111,8 @@ footer .twitter-share-button {
 .light.purple {
   background-size: 50px auto;
   background-position: center;
-  left: calc(100% - 50px)!important;
-  bottom: 250px!important;
+  left: calc(100% - 50px) !important;
+  bottom: 250px !important;
   -webkit-animation: swing 4s infinite alternate
     cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -moz-animation: swing 4s infinite alternate
@@ -1567,7 +1567,6 @@ footer .twitter-share-button {
 
   .title {
     // font-size: 3.46667em;
-
   }
 
   .background {
@@ -2756,7 +2755,7 @@ html.touch .links a.tap {
     width: auto;
     margin: 0;
     opacity: 1;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -2812,10 +2811,10 @@ html.touch .links a.tap {
 }
 .splide__slide img {
   position: absolute;
-  bottom: 50px;
+  bottom: 15vh;
   left: 50%;
   transform: translateX(-50%);
-  height: 400px;
+  height: 66%;
   width: auto;
 }
 .splide-block {
@@ -3019,10 +3018,55 @@ html.touch .links a.tap {
   animation-name: bounce-2;
   animation-timing-function: ease;
   animation-duration: 4s;
-        animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 @keyframes bounce-2 {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-30px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#menu {
+  li a{
+    color: #000;
+  }
+  li:hover:not(.active) {
+    font-weight: 400;
+    color: #dfdb16;
+    background: url("https://ewebdesign.com/wp-content/themes/ewebdesign/assets/img/wave.svg");
+    background-repeat: repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto auto;
+    background-repeat: repeat-x;
+    background-size: 15px 5px;
+    background-position: 2px 19px;
+    animation: move 15s linear infinite;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+  @-webkit-keyframes move {
+    from {
+      background-position: 2px 19px;
+    }
+    to {
+      background-position: 500px 19px;
+    }
+  }
+
+  @keyframe move {
+    from {
+      background-position: 2px 19px;
+    }
+    to {
+      background-position: 500px 19px;
+    }
+  }
 }

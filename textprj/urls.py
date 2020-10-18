@@ -24,6 +24,8 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('', views.MainPageView.as_view()),
     path('admin/', admin.site.urls),
+    path('about/', views.aboutView.as_view()),
+    path('products/', views.productsView.as_view()),
     path(r'^paralax/', TemplateView.as_view(template_name="prlx.html"),
                    name='prlxpage'),
 ]

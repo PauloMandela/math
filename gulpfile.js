@@ -142,5 +142,5 @@ exports.watch = series(
 );
 exports.default = series(clear, parallel(js, scss, img));
 
-exports.img = series(img);
+exports.img = series(minjs);
 exports.fonts = series(css);

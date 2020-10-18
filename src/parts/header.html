@@ -1,0 +1,158 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tolkun</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<meta name="author" content="Alvaro Trigo Lopez" />
+<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
+<meta name="keywords"
+    content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+<meta name="Resource-type" content="Document" />
+
+<link rel="stylesheet" type="text/css" href="../static/css/main.min.css" />
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+
+<script type="text/javascript" src="../static/js/jquery.js"></script>
+
+
+<style>
+    /* Style for our header texts
+	* --------------------------------------- */
+    h1 {
+        font-size: 5em;
+        font-family: arial, helvetica;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Centered texts in each section
+	* --------------------------------------- */
+    .section {
+        text-align: center;
+        overflow: hidden;
+    }
+
+
+    /* Backgrounds will cover all the section
+	* --------------------------------------- */
+    #section1,
+    #section2,
+    #section3 {
+        background-size: auto;
+    }
+
+    /* Defining each section background and styles
+	* --------------------------------------- */
+    #section1 {
+        background-image: url(../static/img/bg1.jpg);
+    }
+
+    #section2 {
+        /* background-image: url(../static/img/panel.jpg); */
+        /* padding: 6% 0 0 0; */
+    }
+
+    #section3 {
+        background-image: url(../static/img/bg3.jpg);
+        /* padding: 6% 0 0 0; */
+    }
+
+    #section3 h1 {
+        color: #000;
+    }
+
+
+
+    #section1 h1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 30px;
+        color: #fff;
+    }
+
+    #section2 .intro {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 30px;
+    }
+
+    #section2 h1,
+    #section2 p {
+        text-shadow: 1px 5px 20px #000;
+    }
+
+    #section3 h1,
+    #section3 p {
+        text-shadow: 1px 5px 20px #000;
+        color: #fff;
+    }
+
+    .splide-block {
+        height: 100vh;
+        width: 25vw;
+        display: inline-block;
+        background: yellow;
+    }
+
+    .splide-block div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .splide__pagination {
+        display: none;
+    }
+
+    #myVideo {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    #menu {
+        z-index: 9;
+    }
+
+    #menu li {
+        padding-bottom: 5px;
+    }
+
+    #menu li a {
+        outline: none;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-family: 'Roboto Slab';
+
+    }
+
+    #menu li.active a {
+        color: yellowgreen;
+    }
+
+    #mutebtn {
+        z-index: 9999;
+        position: absolute;
+        bottom: 20px;
+        right: 30px;
+        background: transparent;
+        width: 40px;
+        padding: 0;
+    }
+
+    #logo-link {
+        background-color: #fff !important;
+        border-radius: 50% !important;
+        background-image: none !important;
+    }
+
+    #logo-link img {
+        width: 150px;
+        transform: translateY(15px);
+    }
+</style>

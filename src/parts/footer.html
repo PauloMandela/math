@@ -1,0 +1,29 @@
+
+<script>
+
+    window.addEventListener('load', function () {
+        new Splide('.splide', {
+            autoWidth: true,
+            rewind: true,
+            type: "loop",
+        }).mount();
+    });
+    function audi() {
+        var source = "../static/img/volny.mp3"
+        var audio = document.createElement("audio");
+        audio.setAttribute("id", "wavesAudio")
+        //
+        audio.autoplay = true;
+        //
+        audio.load()
+        audio.addEventListener("load", function () {
+            audio.play();
+        }, true);
+        audio.src = source;
+    }
+    function muteornot() {
+        var audio = document.getElementById('wavesAudio')
+        console.log(audio)
+        audio.pause();
+    }
+</script>

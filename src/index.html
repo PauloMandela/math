@@ -2,196 +2,62 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>pagePiling.js plugin - Backgrounds</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
-	<meta name="keywords"
-		content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
-	<meta name="Resource-type" content="Document" />
-
-	<link rel="stylesheet" type="text/css" href="../static/css/pp.css" />
-	<link rel="stylesheet" type="text/css" href="../static/css/main.min.css" />
-
-	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
-
-	<script type="text/javascript" src="../static/js/jquery.js"></script>
+	@@include('parts/header.html')
 	<script type="text/javascript" src="../static/js/pp.js"></script>
 	<script type="text/javascript" src="../static/js/splide.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/pp.css" />
 	<script type="text/javascript">
 		var deleteLog = false;
-
 		$(document).ready(function () {
 			$('#pagepiling').pagepiling({
 				menu: '#menu',
-				anchors: ['page1', 'page2', 'page3', 'page4'],
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
 				navigation: {
 					'textColor': '#f2f2f2',
 					'bulletsColor': '#ccc',
 					'position': 'right',
-					'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
+					'tooltips': ['Esasy', 'Önümler', 'Biz barada', 'Zawodlarymyz', 'Habarlaşmak üçin']
 				}
 			});
-
 		});
 	</script>
-
 	<style>
-		/* Style for our header texts
-	* --------------------------------------- */
-		h1 {
-			font-size: 5em;
-			font-family: arial, helvetica;
-			color: #fff;
-			margin: 0;
-			padding: 0;
-		}
-
-		/* Centered texts in each section
-	* --------------------------------------- */
-		.section {
-			text-align: center;
-			overflow: hidden;
-		}
-
-
-		/* Backgrounds will cover all the section
-	* --------------------------------------- */
-		#section1,
-		#section2,
-		#section3 {
-			background-size: auto;
-		}
-
-		/* Defining each section background and styles
-	* --------------------------------------- */
-		#section1 {
-			background-image: url(../static/img/bg1.jpg);
-		}
-
-		#section2 {
-			/* background-image: url(../static/img/panel.jpg); */
-			/* padding: 6% 0 0 0; */
-		}
-
-		#section3 {
-			background-image: url(../static/img/bg3.jpg);
-			/* padding: 6% 0 0 0; */
-		}
-
-		#section3 h1 {
+		#to-products-page-link {
+			position: absolute;
+			bottom:30px;
+			left: 50%;
+			background-color: #fff;
 			color: #000;
-		}
-
-
-
-		#section1 h1 {
-			position: absolute;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
-			top: 30px;
-			color: #fff;
-		}
-
-		#section2 .intro {
-			position: absolute;
-			left: 0;
-			right: 0;
-			margin: 0 auto;
-			top: 30px;
-		}
-
-		#section2 h1,
-		#section2 p {
-			text-shadow: 1px 5px 20px #000;
-		}
-
-		#section3 h1,
-		#section3 p {
-			text-shadow: 1px 5px 20px #000;
-			color: #fff;
-		}
-
-		#infoMenu li a {
-			color: #fff;
-		}
-
-		.splide-block {
-			height: 100vh;
-			width: 25vw;
-			display: inline-block;
-			background: yellow;
-		}
-
-		.splide-block div {
-			width: 100%;
-			height: 100%;
-		}
-
-		.splide__pagination {
-			display: none;
-		}
-
-		#myVideo {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			min-width: 100%;
-			min-height: 100%;
-		}
-
-		#menu li a {
-			font-size: 16px;
-			font-family: gilroybold;
-			letter-spacing: 2px;
-			line-height: 19px;
-			padding-bottom: 6px;
+			padding: 15px 20px;
+			border-radius: 5px;
+			transform: translateX(-50%);
+			z-index: 99;
+			font-size: 2rem;
 			text-transform: uppercase;
-			position: relative;
-			background: -webkit-gradient(linear, left top, left bottom, from(#e46b2d), to(#e46b2d));
-			background: linear-gradient(to bottom, #e46b2d 0, #e46b2d 100%);
-			background-position: 0 100%;
-			background-repeat: repeat-x;
-			background-size: 2px 2px;
-			text-decoration: none;
-			-webkit-transition: all .35s ease-in-out;
-			transition: all .35s ease-in-out;
 		}
-	</style>
-	<style>
-		#mutebtn{
-			z-index: 9999;
-			position: absolute;
-			bottom: 20px;
-			right: 30px;
-			background: transparent;
-			width: 40px;
-			padding: 0;
+		#to-products-page-link:hover {
+			color: #999;
 		}
-	</style>
 
+	</style>
 </head>
-
+<div class="preloader">
+	
+</div>
 <body id="body-container" onload="audi()">
 	<button id="mutebtn" onclick="muteornot()"><img src="../static/img/mute.png" alt="mute"></button>
-	<ul id="menu">
-		<li data-menuanchor="page1" class="active"><a href="#page1">Page 1</a></li>
-		<li data-menuanchor="page2"><a href="#page2">Page 2</a></li>
-		<li data-menuanchor="page3"><a href="#page3">Page 3</a></li>
-		<li data-menuanchor="page4"><a href="#page4">Page 4</a></li>
-	</ul>
+	@@include('parts/menu.html')
 
 	<div id="pagepiling">
 		<div class="section" id="section1">
 			<div id="lets-go" data-menuanchor="page2" class="bounce-2"><a href="#page2">
-				<img src="../static/img/download.png" alt="">
-			</a></div>
+					<img src="../static/img/download.png" alt="">
+				</a></div>
 			<iframe src="prlx.html" frameborder="0" width="100%" height="100%"></iframe>
 		</div>
 		<div class="section" id="section2">
+			<a href="products.html" id="to-products-page-link">Ähli önümler</a>
 			<div class="intro">
 				<div class="splide">
 					<div class="splide__track">
@@ -244,46 +110,25 @@
 				</div>
 			</div>
 		</div>
-		<div class="section" id="section3">
-			<div class="intro">
-				<h1>Just terrific!</h1>
-				<p>Use the power of images</p>
+		<div class="section" id="section3" style="background-image: url(https://picsum.photos/1400/1200/?blur=5);">
+			<div style="width: 75%; display: block; margin: 0 auto;">
+				<h3 style="text-transform: uppercase;font-size: 2rem;font-weight: 700; margin: 15px 0;">Biziň
+					önümçiligimizden pursatlar</h3>
+
 			</div>
 		</div>
-		<div class="section" id="section4">
+		<div class="section" id="section4" style="background-color: aqua;">
+			<div class="intro" style="">
+				<h1>zawodlarymyz</h1>
+			</div>
+		</div>
+		<div class="section" id="section5" style="background-color: rebeccapurple;">
 			<video autoplay muted loop id="myVideo">
 				<source src="../static/img/cola.mp4" type="video/mp4">
 			</video>
 		</div>
 	</div>
-	<script>
-		
-		window.addEventListener('load', function () {
-			new Splide('.splide', {
-				autoWidth: true,
-				rewind: true,
-				type: "loop",
-			}).mount();
-		});
-		function audi() {
-			var source = "../static/img/volny.mp3"
-			var audio = document.createElement("audio");
-			audio.setAttribute("id", "wavesAudio")
-			//
-			audio.autoplay = true;
-			//
-			audio.load()
-			audio.addEventListener("load", function () {
-				audio.play();
-			}, true);
-			audio.src = source;
-		}
-		function muteornot() {
-			var audio = document.getElementById('wavesAudio')
-			console.log(audio)
-			audio.pause();
-		}
-	</script>
+	@@include('parts/footer.html')
 </body>
 
 </html>

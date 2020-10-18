@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    @@include('parts/header.html')
+    <script type="text/javascript" src="../static/js/splide.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/gallery.css" />
+    <script type="text/javascript" src="../static/js/gallery.js"></script>
+    <style>
+        section {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+        }
+
+        #first-section p {
+            margin: 5px;
+        }
+
+        #first-section>div {
+            position: absolute;
+            left: 50%;
+            top: 200px;
+            transform: translate(-50%);
+            color: #000;
+        }
+
+        #ocean {
+            position: absolute;
+            width: 100%;
+            background-image: -webkit-gradient(linear,
+                    left bottom,
+                    left top,
+                    color-stop(0, rgb(0, 50, 150)),
+                    color-stop(0.50, rgb(0, 150, 255)));
+        }
+
+        .wave {
+            background: #a8e3ff;
+            display: inline-block;
+            height: 60%;
+            width: 10px;
+            position: absolute;
+            -webkit-animation-name: dostuff;
+            -webkit-animation-duration: 3s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-transition-timing-function: ease-in-out;
+        }
+
+
+        @-webkit-keyframes dostuff {
+            0% {
+                height: 60%;
+            }
+
+            50% {
+                height: 40%;
+            }
+
+            100% {
+                height: 60%;
+            }
+        }
+
+        footer {
+            position: absolute;
+            z-index: 999;
+            bottom: 50px;
+            width: 100%;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+            line-height: 2rem;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        #menu {
+            box-shadow: 0 0 4px 1px #00000038;
+        }
+
+        .splide-block {
+            height: 333px;
+            width: 300px;
+            background-color: transparent;
+        }
+
+        .splide__slide img {
+            height: 300px;
+            top: 0;
+        }
+
+        .splide__slide .desc {
+            color: #000;
+            display: block;
+            width: 100%;
+            height: 50px;
+        }
+
+        .splide__slide .desc h3 {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        section .intro h1 {
+            position: absolute;
+            width: 100%;
+            font-size: 2rem;
+            color: #000;
+            margin: 15px 0 0 0;
+            text-align: left;
+            padding: 0 5vw;
+        }
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-menuanchor="page2"><a href="products.html">Önümlerimiz</a></li>
+        <li data-menuanchor="page3"><a href="#page3">Biz barada</a></li>
+        <li data-menuanchor="page1" class="active" id="logo-link"><a href="/templates/"><img
+                    src="../static/img/logo.png" alt=""></a></li>
+        <li data-menuanchor="page4"><a href="#page4">Zawodlarymyz</a></li>
+        <li data-menuanchor="page5"><a href="#page5">Habarlaşmak üçin</a></li>
+    </ul>
+    <section id="first-section" style="background-image: url(https://picsum.photos/1300/1200?random=2)">
+        <div>
+            <p>Discover Uinta</p>
+            <h2>OUR CRAFT</h2>
+        </div>
+    </section>
+    <section style="height: auto; background-color: lightcyan;">
+        <div class="intro">
+            <h1>Some text here</h1>
+            <div class="splide" style="margin-bottom: 40px; margin-top: 85px;">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a href="#" class="splide-block">
+                                <div>
+                                    <img src="../static/img/auqa1.png" alt="apple">
+                                </div>
+                            </a>
+                            <div class="desc">
+                                <h3>ADY</h3>
+                                <p>Lorem, ipsum dolor.</p>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <a href="#" class="splide-block">
+                                <div>
+                                    <img src="../static/img/auqa2.png" alt="lemon">
+                                </div>
+
+                            </a></li>
+                        <li class="splide__slide">
+                            <a href="#" class="splide-block">
+                                <div><img src="../static/img/auqa3.png" alt="pinaplle">
+                                </div>
+
+                            </a></li>
+                        <li class="splide__slide">
+                            <a href="#" class="splide-block">
+                                <div><img src="../static/img/auqa4.png" alt="apple">
+                                </div>
+
+                            </a></li>
+                        <li class="splide__slide">
+                            <a href="#" class="splide-block">
+                                <div></div>
+
+                            </a></li>
+                        <li class="splide__slide">
+                            <a href="#" class="splide-block">
+                                <div></div>
+
+                            </a></li>
+                        <li class="splide__slide">
+                            <a href="#" class="splide-block">
+                                <div></div>
+
+                            </a></li>
+                        <li class="splide__slide">
+                            <a href="#" class="splide-block">
+                                <div></div>
+
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="height: auto;">
+        <div class="splide" style="margin-bottom: 40px; margin-top: 85px;">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <a href="#" class="splide-block">
+                            <div>
+                                <img src="../static/img/auqa1.png" alt="apple">
+                            </div>
+                        </a>
+                        <div class="desc">
+                            <h3>ADY</h3>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="#" class="splide-block">
+                            <div>
+                                <img src="../static/img/auqa2.png" alt="lemon">
+                            </div>
+
+                        </a></li>
+                    <li class="splide__slide">
+                        <a href="#" class="splide-block">
+                            <div><img src="../static/img/auqa3.png" alt="pinaplle">
+                            </div>
+
+                        </a></li>
+                    <li class="splide__slide">
+                        <a href="#" class="splide-block">
+                            <div><img src="../static/img/auqa4.png" alt="apple">
+                            </div>
+
+                        </a></li>
+                    <li class="splide__slide">
+                        <a href="#" class="splide-block">
+                            <div></div>
+
+                        </a></li>
+                    <li class="splide__slide">
+                        <a href="#" class="splide-block">
+                            <div></div>
+
+                        </a></li>
+                    <li class="splide__slide">
+                        <a href="#" class="splide-block">
+                            <div></div>
+
+                        </a></li>
+                    <li class="splide__slide">
+                        <a href="#" class="splide-block">
+                            <div></div>
+
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="ocean" style="display: block;overflow: hidden;">
+        <footer>
+            <h1>Hello</h1>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit officia quod iste aperiam similique
+            minima nisi illum debitis quia nesciunt, odit totam repellat sit, ab dicta quisquam porro dolore ipsam?
+        </footer>
+    </section>
+    <script>
+
+        $(document).ready(function () {
+            let splide = $('.splide');
+            for (let i = 0; i < splide.length; i++) {
+                const element = splide[i];
+                new Splide(element, {
+                    autoWidth: true,
+                    rewind: true,
+                    type: "loop",
+                }).mount();
+            }
+
+            var ocean = document.getElementById("ocean"),
+                waveWidth = 10,
+                waveCount = Math.floor(window.innerWidth / waveWidth),
+                docFrag = document.createDocumentFragment();
+
+            for (var i = 0; i < waveCount; i++) {
+                var wave = document.createElement("div");
+                wave.className += " wave";
+                docFrag.appendChild(wave);
+                wave.style.left = i * waveWidth + "px";
+                wave.style.webkitAnimationDelay = (i / 100) + "s";
+            }
+
+            ocean.appendChild(docFrag);
+        });
+
+    </script>
+</body>
+
+</html>

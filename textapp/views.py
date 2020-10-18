@@ -9,6 +9,15 @@ class MainPageView(View):
     def get(self, request):
         return render(request, 'index.html', locals())
 
+class aboutView(View):
+    def get(self, request):
+        return render(request, 'about.html', locals())
+
+
+class productsView(View):
+    def get(self, request):
+        return render(request, 'products.html', locals())
+
 @xframe_options_exempt
 class TempView(TemplateView):
     def get(self, request):
