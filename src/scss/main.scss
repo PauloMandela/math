@@ -841,11 +841,15 @@ footer .twitter-share-button {
   background-size: 128px 224px;
   height: 224px;
   width: 128px;
-  background-image: url(../img/lighthouse.png);
+  background-image: url(../img/buratino-1L-2.png);
   background-repeat: no-repeat;
   bottom: 64px;
   position: absolute;
   right: 30%;
+}
+.lighthouse,
+.light.orange {
+  background-size: contain!important;
 }
 .boat {
   background-image: url(../img/boat.png);
@@ -887,7 +891,7 @@ footer .twitter-share-button {
 }
 
 .light.purple {
-  background-image: url(../img/auqa1.png);
+  background-image: url(../img/BRN_0665.png);
 }
 .light.a {
   bottom: 80px;
@@ -1097,7 +1101,7 @@ footer .twitter-share-button {
   height: 16px;
 }
 .light.orange {
-  background-image: url(../img/light-orange.png);
+  background-image: url(../img/IMG_20201014_091610.png);
   width: 200px;
   height: 200px;
   background-size: 200px 200px;
@@ -3033,40 +3037,46 @@ html.touch .links a.tap {
 }
 
 #menu {
+    box-shadow: 0 0 4px 1px #00000038;
   li a{
     color: #000;
   }
-  li:hover:not(.active) {
-    font-weight: 400;
-    color: #dfdb16;
-    background: url("https://ewebdesign.com/wp-content/themes/ewebdesign/assets/img/wave.svg");
-    background-repeat: repeat;
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-size: auto auto;
-    background-repeat: repeat-x;
-    background-size: 15px 5px;
-    background-position: 2px 19px;
-    animation: move 15s linear infinite;
-    text-decoration: none;
-    background-color: transparent;
-  }
-
-  @-webkit-keyframes move {
-    from {
-      background-position: 2px 19px;
-    }
-    to {
-      background-position: 500px 19px;
+  li:hover {
+    a {
+      color: #4648d850;
     }
   }
+}
 
-  @keyframe move {
-    from {
-      background-position: 2px 19px;
+#footer-logo {
+  height: 250px;
+  width: auto;
+  margin: 0 auto;
+}
+#menu a span:first-child {
+  margin-right: 10px;
+  font-size: .85rem;
+  color: #4648d8;
+  line-height: normal;
+}
+
+@media only screen and (max-width: 800px) {
+  #menu li:hover {
+    background: none!important;
+    span {
+      background-color: #4648d850;
     }
-    to {
-      background-position: 500px 19px;
-    }
+  }
+  #menu a span:first-child {
+    font-size: 18px!important;
+    border: 1px dotted #4648d850;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    margin-top: 5px;
+  }
+  .no-mobile {
+    display: none;
   }
 }

@@ -15,3 +15,5 @@ node_modules/
 # build/
 src/img/
 src/fonts/
+media content/
+static/

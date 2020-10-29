@@ -1076,3 +1076,11 @@
     }
   };
 })(jQuery, document, window);
+
+
+$( document ).ready(function() {
+  $('#mutebtn').click(function () {
+    $('body audio').muted = true;
+    console.log('mute')
+  })
+});
